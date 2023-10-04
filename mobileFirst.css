@@ -13,7 +13,7 @@ header {
     align-items: center;
     justify-content: center;
     width: 100vw;
-    
+    height: 55px;
 }
 
 #containerHeader {
@@ -52,6 +52,30 @@ nav {
 }
 
 #navegation > ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
+}
+
+#navegation > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* main */
+
+/* conteudo principal */
+
+#principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100vw;
 }
