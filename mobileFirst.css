@@ -12,7 +12,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
     height: 55px;
 }
 
@@ -41,7 +40,7 @@ nav {
 }
 
 #navegation {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 100vw;
@@ -52,7 +51,6 @@ nav {
 }
 
 #navegation > ul {
-    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -95,11 +93,14 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 25px;
+    max-width: 800px;
 }
 
 #textPrincipal > p {
-    width: 300px;
+    width: 70vw;
+    max-width: 550px;
     text-align: center;
 }
 
@@ -107,6 +108,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;  
+  padding: 10px 0;
   gap: 30px;
 }
 
@@ -119,4 +121,47 @@ main {
     border-radius: 10px;
     box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.192);
     cursor: pointer;
+}
+
+/* sobre */
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    max-width: 800px;
+    gap: 25px;
+    padding: 10px 0;
+}
+
+.barraTitulo {
+    display: block;
+    width: 2rem;
+    height: 2px;
+    background-color: chocolate;
+}
+
+#conteudoSobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+#conteudoSobre > p {
+    width: 70vw;
+    max-width: 550px;
+    text-align: center;
+}
+
+/* estrutura */
+
+#estrutura {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    max-width: 800px;
+    gap: 25px;
+    padding: 10px 0;
 }
