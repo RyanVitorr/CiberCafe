@@ -69,6 +69,12 @@ nav {
 }
 
 /* main */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* conteudo principal */
 
@@ -77,5 +83,7 @@ nav {
     align-items: center;
     justify-content: center;
     height: 90vh;
-    width: 100vw;
+    width: 90vw;
+    max-width: 800px;
+    padding: 0 10px;
 }
