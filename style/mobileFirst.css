@@ -119,7 +119,8 @@ main {
   justify-content: center;
   align-items: center;  
   padding: 10px 10px;
-  gap: 30px;
+  gap: 1rem;
+  width: 70vw;
 }
 
 .bntPrincipal {
@@ -174,6 +175,12 @@ main {
     max-width: 800px;
     gap: 25px;
     padding: 10px 0;
+}
+
+#conteudoEstrutura {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 #EstruturaCafé {
