@@ -50,7 +50,13 @@
     #navegation > ul > li > a {color: black;}
     
     #botaoUp.scroll{display: none;}
+
+    /* principal */
     
+    #botoesPrincipal {
+        gap: 100px;
+    }
+
    /* sobre */
 
     #cardInfos {
