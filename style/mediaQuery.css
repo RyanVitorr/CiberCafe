@@ -1,0 +1,73 @@
+@media only screen and (min-width: 650px) {
+
+
+    body.ativo {
+        position: static;
+        width: auto;
+    }
+
+    /* header */
+
+    #containerHeader.scroll {
+        position: fixed;
+        top: 5px;
+        width: 90%;
+        height: 55px;
+        background-color: red;
+        border-radius: 20px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.034);
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #navegation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: static;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(0px);
+    }
+    
+    #navegation > ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        padding: 0 10px;
+        background-color: white;
+    }
+    
+    #navegation > ul > li {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    #navegation > ul > li > a {color: black;}
+    
+    #botaoUp.scroll{display: none;}
+    
+   /* sobre */
+
+    #cardInfos {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        gap: 50px;
+        max-width: 600px;
+    }
+
+    #cardInfos > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #cardInfos > div > p {margin: 0; padding: 0;}
+    #cardInfos > div > h4{margin: 0; padding: 0;}
+}

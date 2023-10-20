@@ -28,7 +28,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-    width: 100%;
+    width: 90%;
     max-width: 800px;
 }
 
@@ -188,14 +188,15 @@ main {
     display: flex;
     flex-direction: column;
     width: 80vw;
+    
     max-width: 800px;
     gap: 10px;
     padding: 10px 0;
 }
 
-.titulo > h3 {
-    overflow: hidden;
-}
+.titulo {margin-top: 80px;}
+
+.titulo > h3 {overflow: hidden;}
 
 .barraTitulo {
     display: block;
@@ -214,7 +215,7 @@ main {
 
 #conteudoSobre > p {
     width: 70vw;
-    max-width: 550px;
+    max-width: 600px;
     text-align: center;
 }
 
@@ -227,6 +228,7 @@ main {
     width: 100%;
 }
 
+#cardInfos > div > p {overflow: hidden;}
 #cardInfos > div > h4{overflow: hidden;}
 
 #mapa {
@@ -234,7 +236,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 550px;
+    max-width: 600px;
     
 }
 
@@ -252,7 +254,7 @@ main {
 #conteudoEstrutura {
     display: flex;
     flex-direction: column;
-    gap: 150px;
+    gap: 110px;
 }
 
 #EstruturaCafé {
@@ -267,7 +269,7 @@ main {
 
 #EstruturaCafé > p {
     width: 70vw;
-    max-width: 550px;
+    max-width: 600px;
     text-align: center;
 }
 
@@ -283,7 +285,7 @@ main {
 
 #EstruturaLan > p {
     width: 70vw;
-    max-width: 550px;
+    max-width: 600px;
     text-align: center;
 }
 
@@ -293,7 +295,7 @@ main {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .cardBnt {
