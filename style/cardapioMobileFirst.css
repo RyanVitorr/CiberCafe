@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+#bannerCardapio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35vh;
+}
+
+#conteudoBannerCardapio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 25px;
+}
+
+#conteudoBannerCardapio > h2 { text-align: center;}
+
+#cardapio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+}
+
+#listCardapio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+#listCardapio > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.barraSeparaList {
+    width: 1px;
+    height: 100%;
+    background-color: white;
+}
+
+#listCardapio > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#listCardapio > ul > li > a {color: white; text-decoration: none;}
+
+#containerCardapio {
+    display: flex;
+    height: 100%;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.menuCardapio {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    gap: 35px;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.cardCardapio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+}
+
+.imgCardCardapio { width: 100%;}
+
+.infosCardCardapio {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px 0;
+}
+
+.bntComprar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.bntComprar > p {color: white;}
