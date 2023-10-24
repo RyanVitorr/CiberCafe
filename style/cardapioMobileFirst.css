@@ -71,6 +71,8 @@
 
 #containerCardapio {
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     padding: 10px;
     overflow-x: hidden;
@@ -79,7 +81,10 @@
 .menuCardapio {
     display: grid;
     grid-template-columns: auto auto;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 900px;
     gap: 35px;
     height: 100%;
     padding: 0 10px;
