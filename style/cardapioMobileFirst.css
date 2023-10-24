@@ -6,7 +6,6 @@
     list-style: none;
 }
 
-
 #bannerCardapio {
     display: flex;
     align-items: center;
@@ -22,7 +21,6 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    gap: 25px;
 }
 
 #conteudoBannerCardapio > h2 { text-align: center;}
@@ -31,9 +29,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    gap: 5px;
+
 }
 
 #listCardapio {
@@ -41,8 +40,11 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 50px;
+    max-width: 900px;
+    height: 35px;
     background-color: black;
+    position: sticky;
+    top: 0;
 }
 
 #listCardapio > ul {
@@ -50,6 +52,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    
     height: 100%;
 }
 
@@ -67,7 +70,7 @@
     height: 100%;
 }
 
-#listCardapio > ul > li > a {color: white; text-decoration: none;}
+#listCardapio > ul > li {color: white;}
 
 #containerCardapio {
     display: flex;
@@ -75,19 +78,17 @@
     justify-content: center;
     height: 100%;
     padding: 10px;
-    overflow-x: hidden;
 }
 
 .menuCardapio {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 90%;
     max-width: 900px;
-    gap: 35px;
+    gap: 20px;
     height: 100%;
-    padding: 0 10px;
 }
 
 .cardCardapio {
