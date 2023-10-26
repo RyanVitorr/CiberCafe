@@ -8,11 +8,18 @@
 
 
 /* main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
 #bannerPrincipal {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: 475px;
 }
 
@@ -31,8 +38,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
     padding: 10px 0;
+    width: 100%;
 }
 
 #conteudoIcones {
@@ -76,8 +83,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vw;
+    width: 100%;
+    height: 100vh;
+    gap: 5px;
 }
 
 .divsInfos {
@@ -88,16 +96,23 @@
     height: 100%;
     max-height: 500px;
     position: relative;
+
 }
 
 .conteudoInfos {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 15px;
     width: 100%;
+    max-width: 500px;
     height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.644);
 }
+
+.conteudoInfos > p {text-align: center;}
+#textInfos > p {text-align: center;}
