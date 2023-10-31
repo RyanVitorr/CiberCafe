@@ -108,6 +108,7 @@ main {
     width: 100%;
     max-width: 500px;
     height: 100%;
+    padding: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -118,19 +119,107 @@ main {
 .conteudoInfos > p {text-align: center;}
 #textInfos > p {text-align: center;}
 
-/* carrinho */
-
-
-#aluguel {
+#bntInfos {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
 
+#bntInfos > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 1.5rem;
+    border: none;
+}
+
+#bntInfos > button > a {text-decoration: none; color: black;}
+
+/* carrinho */
+
+/* section principal*/
+
+#aluguel {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#aluguel.ativo {display: flex;}
+
 #containerAluguel {
     width: 100%;
 }
+
+/* escolha das mesas*/
+
+#mesas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    gap: 20px;
+}
+
+#conteudoMesas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+    gap: 2rem;
+}
+
+#mesasGrupo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.caixaMesas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 2rem;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#mesasSolo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.caixaMEsaSolo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 1.5rem;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+/* mesas escolhidas*/
+
+#Produto {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#Produto.ativo{display: block;}
 
 #containerProduto {
     display: flex;
@@ -213,8 +302,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 1.5rem;
+    height: 1.5rem;
     border: none;
     border-radius: 5px;
     background-color: black;
@@ -222,10 +311,20 @@ main {
 
 .bntAluguel > button > i {color: white;}
 
-.bntAluguel > input::placeholder {
+.bntAluguel > input {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 1.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#excluirItem {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 #infoAluguel {
@@ -242,15 +341,15 @@ main {
 
 #conteudoAluguel > p {text-align: center; font-size: 18px;}
 
+/* valro da mesa */
 
 #containerValorPagamento {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 35px;
-    margin: 20px 0 10px;
-    background-color: black;
+    gap: 5px; 
 }
 
 #conteudoValorPagamento {
@@ -260,18 +359,32 @@ main {
     width: 100%;
     height: 100%;
     gap: 20px;
+    background-color: black;
 }
 
 #conteudoValorPagamento > span {color: white;}
 #valorTotal > span {color: white;}
 
+#pagar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+}
+
+#pagar > p {margin: 0; color: white;}
+
+/* escolha o pagamento*/
 
 #containerFormaPagamento {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
+    margin-top: 20px;
 
 }
+#containerFormaPagamento.ativo {display: flex;}
 
 #pagamentos {
     display: flex;
