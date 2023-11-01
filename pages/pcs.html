@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="../style/pcsMobileFirst.css">
+    <link rel="stylesheet" href="../style/mediaQueryPc.css">
     <title>CyberCafé</title>
 </head>
 <body>
@@ -120,68 +121,68 @@
                     </div>
                 </div>
 
-                <div id="Produto">
-                    <div id="containerProduto">
-                        <div class="titulo">
-                            <h4>Seu carrinho</h4>
-                        </div>    
-                        <div id="containerPcs">
-                            <div class="pcsCard">
-                                <div class="conteudoCard">
-                                    <div class="imgCard">
-                                        <img src="#" alt="">
-                                    </div>
-                                    <div class="textInfos">
-                                        <span>Mesa em Grupo 1</span>
-                    
-                                        <div class="horasAlugadas">
-                                            <p>Tempo de aluguel:</p>
-                                            <div class="bntAluguel">
-                                                <button><i class="fa-solid fa-minus"></i></button>
-                                                
-                                                <input type="number" placeholder="Outro" min="1" max="10" value="1">
-                    
-                                                <button><i class="fa-solid fa-plus"></i></button>
-
-                                                <div id="excluirItem">
-                                                    <i class="fa-solid fa-trash"></i>
-                                                </div>
-                                            </div>
-                                            
+                <div id="produtosDiv">
+                    <div id="Produto">
+                        <div id="containerProduto">
+                            <div class="titulo">
+                                <h4>Seu carrinho</h4>
+                            </div>
+                            <div id="containerPcs">
+                                <div class="pcsCard">
+                                    <div class="conteudoCard">
+                                        <div class="imgCard">
+                                            <img src="#" alt="">
                                         </div>
-
+                                        <div class="textInfos">
+                                            <span>Mesa em Grupo 1</span>
+                    
+                                            <div class="horasAlugadas">
+                                                <p>Tempo de aluguel:</p>
+                                                <div class="bntAluguel">
+                                                    <button><i class="fa-solid fa-minus"></i></button>
+                    
+                                                    <input type="number" placeholder="Outro" min="1" max="10" value="1">
+                    
+                                                    <button><i class="fa-solid fa-plus"></i></button>
+                                                    <div id="excluirItem">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </div>
+                                                </div>
+                    
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="containerValorPagamento">
-                            <div id="conteudoValorPagamento">
-                                <span>Total a pagar: </span>
-                                <div id="valorTotal">
-                                    <span>300,00 R$</span>
+                            <div id="containerValorPagamento">
+                                <div id="conteudoValorPagamento">
+                                    <span>Total a pagar: </span>
+                                    <div id="valorTotal">
+                                        <span>300,00 R$</span>
+                                    </div>
                                 </div>
+                                <div id="pagar"><p>Pagar</p></div>
                             </div>
-                            <div id="pagar"><p>Pagar</p></div>
-                        </div>
-                    </div>
-                    
-                    <div id="containerFormaPagamento">
-                        <div class="titulo">
-                            <span>Escolha a forma de pagamento</span>
                         </div>
                     
-                        <div id="pagamentos">
-                            <div id="pix" class="areaPagamento">
-                                <div class="tituloPagamento">
-                                    <h4>Pix</h4>
-                                    <div class="divDawn"><i class="fa-solid fa-caret-down"></i></div>
-                                </div>
+                        <div id="containerFormaPagamento">
+                            <div class="titulo">
+                                <span>Escolha a forma de pagamento</span>
                             </div>
-                            <hr>
-                            <div id="cartão" class="areaPagamento">
-                                <div class="tituloPagamento">
-                                    <h4>Cartão</h4>
-                                    <div class="divDawn"><i class="fa-solid fa-caret-down"></i></div>
+                    
+                            <div id="pagamentos">
+                                <div id="pix" class="areaPagamento">
+                                    <div class="tituloPagamento">
+                                        <h4>Pix</h4>
+                                        <div class="divDawn"><i class="fa-solid fa-caret-down"></i></div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div id="cartão" class="areaPagamento">
+                                    <div class="tituloPagamento">
+                                        <h4>Cartão</h4>
+                                        <div class="divDawn"><i class="fa-solid fa-caret-down"></i></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
