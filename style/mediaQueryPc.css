@@ -1,10 +1,18 @@
 @media only screen and (min-width: 650px) {
     #conteudoIcones {
-         flex-direction: row;
+        flex-direction: row;
+        height: 350px;
          
     }
 
+    #containerInfos {gap: 20px;}
 
+    .conteudoInfos {
+        gap: 100px;
+    }
+
+    .imgInfos {display: flex; width: 100%; max-width: 350px;}
+    .imgInfos > img {width: 100%;}
 
     #aluguel {
         position: fixed;
@@ -21,10 +29,16 @@
         gap: 50px;
         width: 100%;
         height: 100%;
-        margin-top: 50%;
+        margin-top: 20%;
     }
 
     #mesas {
         width: 280px;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    #bannerPrincipal {
+        background-position: center;
     }
 }

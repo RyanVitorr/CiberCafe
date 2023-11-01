@@ -81,15 +81,16 @@ for (const itensMesas of listaMesasSolo) {
 };
 
 
-/* escolher mesa */ 
-const produto = document.querySelector("#Produto");
+/* ao escolher a mesa */ 
+const produto = document.querySelector("#produto");
 const mesa = document.querySelector("#teste");
 
 mesa.addEventListener("click", () => {
-    produto.classList.toggle("ativo");
-});
-
-/*
+    const addCarrinho =`<div id="containerProduto">
+                        <div class="titulo">
+                            <h4>Seu carrinho</h4>
+                        </div>
+                        <div id="containerPcs">
                             <div class="pcsCard">
                                 <div class="conteudoCard">
                                     <div class="imgCard">
@@ -97,34 +98,75 @@ mesa.addEventListener("click", () => {
                                     </div>
                                     <div class="textInfos">
                                         <span>Mesa em Grupo 1</span>
-                    
+
                                         <div class="horasAlugadas">
                                             <p>Tempo de aluguel:</p>
                                             <div class="bntAluguel">
-                                                <button><i class="fa-solid fa-minus"></i></button>
-                                                
+                                                <button class="
+                                                bntSub"><i class="fa-solid fa-minus"></i></button>
+
                                                 <input type="number" placeholder="Outro" min="1" max="10" value="1">
-                    
-                                                <button><i class="fa-solid fa-plus"></i></button>
 
-                                                <div id="excluirItem">
-                                                    <i class="fa-solid fa-trash"></i>
-                                                </div>
+                                                <button class="
+                                                bntAdd"><i class="fa-solid fa-plus"></i></button>
+                                                
+                                                <button class="bntExcluir"><i class="fa-solid fa-trash"></i></button>
+                                                
                                             </div>
-                                            
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-*/
+                        </div>
+                        <div id="containerValorPagamento">
+                            <div id="conteudoValorPagamento">
+                                <span>Total a pagar: </span>
+                                <div id="valorTotal">
+                                    <span>300,00 R$</span>
+                                </div>
+                            </div>
+                            <div id="pagar"><p>Pagar</p></div>
+                        </div>
+                    </div>`;
+    produto.innerHTML = addCarrinho;
+});
 
-/* pagar */
+/* ao clicar em pagar  */
 
 const pagar = document.querySelector("#pagar");
 
 pagar.addEventListener("click", () => {
-    const formaPagamento = document.querySelector("#containerFormaPagamento");
+    const formaPagamento = `<div id="containerFormaPagamento">
+                                <div class="titulo">
+                                    <span>Escolha a forma de pagamento</span>
+                                </div>
 
-    formaPagamento.classList.toggle("ativo");
+                                <div id="pagamentos">
+                                    <div id="pix" class="areaPagamento">
+                                        <div class="tituloPagamento">
+                                            <h4>Pix</h4>
+                                            <div class="divDawn"><i class="fa-solid fa-caret-down"></i></div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div id="cartão" class="areaPagamento">
+                                        <div class="tituloPagamento">
+                                            <h4>Cartão</h4>
+                                            <div class="divDawn">
+                                                <i class="fa-solid fa-caret-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`;
+    produto.innerHTML = formaPagamento;
 });
+
+/* funcionalidade do botão eliminar */
+const botaoEliminar = document.querySelectorAll(".bntExcluir");
+
+botaoEliminar.length(botoesEliminar);
+botoesEliminar.addEventListener("click", eliminarItem => {
+    
+});
+
