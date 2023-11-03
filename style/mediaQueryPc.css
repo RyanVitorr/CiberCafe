@@ -6,13 +6,18 @@
     }
 
     #containerInfos {gap: 20px;}
+    
 
-    .conteudoInfos {
-        gap: 100px;
-    }
+    .conteudoInfos {gap: 100px;}
+    .conteudo-principal {gap: 100px;}
 
     .imgInfos {display: flex; width: 100%; max-width: 350px;}
     .imgInfos > img {width: 100%;}
+
+    #cards-tipos-pcs {
+        flex-direction: row;
+    }
+
 
     #aluguel {
         position: fixed;

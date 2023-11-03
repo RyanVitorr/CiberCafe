@@ -120,6 +120,23 @@ main {
     background-color: rgba(0, 0, 0, 0.651);
 }
 
+.conteudoInfos:nth-child(3) {
+    flex-direction: column;
+    max-height: 1650px;
+    gap: 50px;
+}
+
+.conteudo-principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    max-height: 650px;
+    padding: 10px;
+}
+
 .textInfosP {
     display: flex;
     flex-direction: column;
@@ -129,278 +146,122 @@ main {
     max-width: 350px;
     height: 350px;
     padding: 10px;
-    gap: 5px
+    gap: 25px
 }
 
 .textInfosP > h2, p {color: white; margin: 0; padding: 0;}
 .imgInfos{display: none;}
 
-/* carrinho */
-
-/* section principal*/
-
-#aluguel {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: white;  
-}
-
-#aluguel.ativo {display: flex;}
-
-#containerAluguel {
-    width: 100%;
-    max-width: 800px;
-}
-
-/* escolha das mesas*/
-
-#mesas {
+#bntInfos {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 30vh;
-}
-
-#conteudoMesas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    gap: 20px;
-}
-
-#mesasGrupo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.caixaMesas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 2rem;
-    border: 1px solid;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#mesasSolo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.caixaMEsaSolo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 1.5rem;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-/* mesas escolhidas*/
-
-#produto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-#containerProduto {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-}
-
-.titulo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: left;
     width: 100%;
     height: 40px;
-    background-color: black;
 }
 
-.titulo > h4 {margin: 0; padding: 0; color: white;}
-.titulo > span {font-size: 18px; color: white;}
+#bntInfos > button {width: 200px; height: 100%;}
 
-#containerPcs {
-    display: flex;
-    width: 100%;
-}
-
-.pcsCard {
+#cards-tipos-pcs {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-}
-
-.conteudoCard {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    gap: 15px;
-}
-
-.imgCard {
-    width: 100px;
-    height: 100px;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-.imgCard > img {width: 100%; height: 100%; object-fit: cover;}
-
-.textInfos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-.textInfos > span {font-size: 18px;}
-
-.horasAlugadas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    gap: 5px;
-}
-.horasAlugadas > p {margin: 0;}
-
-.bntAluguel {
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     gap: 10px;
 }
 
-.bntAluguel > button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.5rem;
-    height: 1.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: black;
-}
-
-.bntAluguel > button > i {color: white;}
-
-.bntAluguel > input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.5rem;
-    border: none;
-    border-radius: 5px;
-}
-
-#excluirItem {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-#infoAluguel {
-    display: flex;
-    width: 100%;
-    margin-top: 10px;
-}
-
-#conteudoAluguel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#conteudoAluguel > p {text-align: center; font-size: 18px;}
-
-/* valor da mesa */
-
-#containerValorPagamento {
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
-    gap: 5px; 
-}
-
-#conteudoValorPagamento {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    gap: 20px;
-    background-color: black;
-}
-
-#conteudoValorPagamento > span {color: white;}
-#valorTotal > span {color: white;}
-
-#pagar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: black;
-}
-
-#pagar > p {margin: 0; color: white;}
-
-/* escolha o pagamento*/
-
-#containerFormaPagamento {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 20px;
-
-}
-
-#pagamentos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
+    max-width: 350px;
+    height: 400px;
     padding: 10px;
 }
+.card:nth-child(1){
+    background-image: url(../img/mesaDeGrupoP.jpg);
+    background-size:cover ;
+}
+.card:nth-child(2){
+    background-image: url(../img/pcP.jpg);
+    background-size:cover ;
+}
 
-.areaPagamento {
+.card:nth-child(3){
+    background-image: url(../img/cabineNeuroDanceP.jpg);
+    background-size:cover ;
+}
+.conteudo-card {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-.tituloPagamento {
+.titulo-card-pcs {
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.562);
 }
-.tituloPagamento > h4{margin: 0;}
+.titulo-card-pcs > h3 {color: white;}
 
-hr {margin: 5px;}
+
+.text-card-pcs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    gap: 50px;
+    padding: 30px 10px;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.603);
+    border-radius: 10px;
+}
+.text-card-pcs > p {color: white; text-align: center; width: 80%;}
+
+.bnt-escolha-mesa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 40px;
+    border-radius: 10px;
+
+    background-color: black;
+}
+
+.bnt-escolha-mesa > p {color: white;}
+
+/* carrinho */
+
+#aluguel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: ;
+}
+
+#container-aluguel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#selecionar-mesa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
