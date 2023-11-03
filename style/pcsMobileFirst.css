@@ -258,7 +258,7 @@ main {
     width: 100%;
     max-width: 1000px;
     padding: 10px 0px;
-    gap: 10px;
+    gap: 25px;
 }
 
 #selecionar-mesa {
@@ -266,6 +266,10 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 625px;
+    border: 1px solid white;
+    border-radius: 10px;
+    gap: 10px;
 }
 
 #titulo-e-container {
@@ -275,6 +279,7 @@ main {
     justify-content: center;
     width: 100%;
     max-width: 500px;
+    gap: 25px;
 }
 
 .titulo {
@@ -284,7 +289,7 @@ main {
     width: 100%;
 }
 
-.titulo >h4 {color: white; text-align: center;}
+.titulo > h4 {color: white; text-align: center;}
 
 #conteudo-selecionar-mesa {
     display: flex;
@@ -293,11 +298,122 @@ main {
     padding: 40px 10px;
 }
 
+.mesas-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.mesas {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.mesas:nth-child(2){background-color: red; cursor: not-allowed;}
+.mesas:nth-child(4){background-color: red; cursor: not-allowed;}
+.mesas:hover:not(:nth-child(2)):not(:nth-child(4)) {background-color: green;} 
+
 #container-valor-aluguel {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 1px solid white;
+    height: 100%;
+}
+
+#escolha-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+}
+
+
+#card-escolha-compra {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card-mesa-escolhida {
+    display: flex;
+    padding: 10px;
+}
+
+.img-card-mesa-escolhida {
+    display: flex;
+    width: 120px;
+}
+.img-card-mesa-escolhida > img {width: 100%;}
+
+.infos-card-mesa-escolhida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.tempo-aluguel-mesa-escolhida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.nome-mesa-escolhida {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nome-mesa-escolhida > span {color: white; text-align: center;}
+
+.titulo-tempo-aluguel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.titulo-tempo-aluguel > p {text-align: center;}
+
+.bnt-aluguel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.bnt-aluguel > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.bnt-aluguel > input {
+    width: 30px;
+}
+
+#aluguel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
 }
 
 #valor-aluguel {
@@ -306,7 +422,8 @@ main {
     justify-content: center;
     width: 100%;
     height: 30px;
-    gap: 50px;
+    gap: 80px;
+    border: 1px solid white;
 }
 #valor-aluguel > h4, p {margin: 0; padding: 0; color: white;}
 
@@ -322,6 +439,7 @@ main {
     align-items: center;
     justify-content: center;
     border: 1px solid white;
+    border-radius: 10px;
     width: 100%;
 }
 
@@ -330,6 +448,8 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 #container-forma-pagamento {
@@ -372,6 +492,7 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    gap: 50px;
 }
 
 #qrcod, #pix-copia-cola {
@@ -380,7 +501,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 10px;
+    gap: 20px;
 }
 
 #titulo-qrcod, #titulo-copia-cola {
@@ -418,6 +539,7 @@ main {
     width: 150px;
     background-color: white;
     padding: 0 20px;
+    overflow: hidden;
 }
 
 #codigo-pix > p {color: black; text-align: center; width: 100%;}
