@@ -7,7 +7,6 @@
 
     #containerInfos {gap: 20px;}
     
-
     .conteudoInfos {gap: 100px;}
     .conteudo-principal {gap: 100px;}
 
@@ -19,27 +18,7 @@
     }
 
 
-    #aluguel {
-        position: fixed;
-        top: 0;
-        height: 100vh;
-        width: 100vw;
-    }
 
-    #containerAluguel {
-        display: flex;
-        flex-direction: row;
-        align-items: top;
-        justify-content: center;
-        gap: 50px;
-        width: 100%;
-        height: 100%;
-        margin-top: 20%;
-    }
-
-    #mesas {
-        width: 280px;
-    }
 }
 
 @media only screen and (min-width: 950px) {
