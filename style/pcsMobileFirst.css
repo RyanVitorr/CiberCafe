@@ -339,7 +339,6 @@ main {
     gap: 20px;
 }
 
-
 #escolha-forma-pagamento{
     display: flex;
     flex-direction: column;
@@ -348,11 +347,22 @@ main {
     width: 100%;
 }
 
-
 .escolher-forma {
     display: flex;
-    align-items: center;
-    justify-content: left;
+    flex-direction: column;
     width: 100%;
     padding-left: 10px;
+    border: 1px solid white;
 }
+
+.titulo-escolher-forma {
+    display: flex; 
+    align-items: center; 
+    justify-content: left;
+    gap: 25px; 
+    width: 100%;
+}
+
+.titulo-escolher-forma > h4, i {color: white; margin: 0;}
+
+
