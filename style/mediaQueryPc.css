@@ -10,8 +10,7 @@
     .conteudoInfos {gap: 100px;}
     .conteudo-principal {gap: 100px;}
 
-    .imgInfos {display: flex; width: 100%; max-width: 350px;}
-    .imgInfos > img {width: 100%;}
+    .imgInfos {display: flex;}
 
     #cards-tipos-pcs {
         flex-direction: row;
@@ -26,6 +25,14 @@
         align-items: start;
         padding: 0px;
         gap: 0;
+    }
+
+    #selecionar-mesa {
+        height: 80vh;
+    }
+
+    #forma-pagamento {
+        height: 80vh;
     }
 
 }

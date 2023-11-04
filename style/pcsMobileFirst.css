@@ -96,8 +96,9 @@ main {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 1px solid;
-    background-color: rgba(0, 162, 255, 0.527);
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    background-color: rgba(96, 192, 247, 0.74);
 }
 
 .caixaImg > i {font-size: 50px;}
@@ -122,6 +123,8 @@ main {
     max-height: 650px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.651);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--azul-Neon);
 }
 
 .conteudoInfos:nth-child(3) {
@@ -150,11 +153,24 @@ main {
     max-width: 350px;
     height: 350px;
     padding: 10px;
-    gap: 25px
+    gap: 25px;
 }
 
 .textInfosP > h2, p {color: white; margin: 0; padding: 0;}
-.imgInfos{display: none;}
+
+.imgInfos { 
+    display: none; 
+    width: 100%; 
+    max-width: 350px; 
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.imgInfos > img {width: 100%;}
+    
+
 
 #bntInfos {
     display: flex;
@@ -163,7 +179,15 @@ main {
     height: 40px;
 }
 
-#bntInfos > button {width: 200px; height: 100%;}
+#bntInfos > button {
+    width: 200px; 
+    height: 100%;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    border-radius: 10px;
+}
+
+#bntInfos > button > a {color: black;}
 
 #cards-tipos-pcs {
     display: flex;
@@ -182,6 +206,8 @@ main {
     max-width: 350px;
     height: 400px;
     padding: 10px;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
 }
 .card:nth-child(1){
     background-image: url(../img/mesaDeGrupoP.jpg);
@@ -211,9 +237,10 @@ main {
     justify-content: center;
     width: 100%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.562);
+    background-color: rgba(0, 0, 0, 0.329);
+    border-radius: 10px;
 }
-.titulo-card-pcs > h3 {color: white;}
+.titulo-card-pcs > h3 {color: var(--rosa-Neon)}
 
 
 .text-card-pcs {
@@ -240,10 +267,11 @@ main {
     height: 40px;
     border-radius: 10px;
 
-    background-color: black;
+    background-color: var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
 }
 
-.bnt-escolha-mesa > p {color: white;}
+.bnt-escolha-mesa > p {color: black;}
 
 /* carrinho */
 
@@ -265,17 +293,23 @@ main {
     border: 1px solid var(--azul-Neon);
     border-radius: 10px;
     box-shadow: 0 0 10px var(--azul-Neon);
-    background-color: #51fff923;
-}
+    background: 
+    linear-gradient(rgba(42, 64, 73, 0.795), rgba(42, 64, 73, 0.795)),
+    url(../img/backgroundCarrinho.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;}
 
 #selecionar-mesa {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 625px;
+    height: 100vh;
+    max-height: 690px;
     border-radius: 10px;
     gap: 10px;
+    padding: 15px;
 }
 
 #titulo-e-container {
@@ -291,8 +325,10 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    background-color: rgba(22, 22, 85, 0.5);
+    padding: 0 8px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
 }
 
 .titulo-pagamento > h4 {
@@ -314,6 +350,9 @@ main {
     flex-direction: column;
     width: 100%;
     padding: 40px 10px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
 }
 
 .mesas-card {
@@ -362,19 +401,35 @@ main {
     justify-content: center;
     width: 100%;
     padding: 10px;
-    gap: 10px;
+    gap: 15px;
 }
+
+#titulo-escolha-compra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+}
+
+#titulo-escolha-compra > h4 {color: white;}
 
 
 #card-escolha-compra {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 10px;
 }
 
 .card-mesa-escolhida {
     display: flex;
     padding: 10px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
 }
 
 .img-card-mesa-escolhida {
@@ -431,10 +486,15 @@ main {
     justify-content: center;
     width: 30px;
     height: 30px;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    border-radius: 5px;
 }
 
 .bnt-aluguel > input {
     width: 30px;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
 }
 
 #aluguel-container {
@@ -443,6 +503,7 @@ main {
     justify-content: end;
     width: 100%;
     height: 100%;
+    
 }
 
 #valor-aluguel {
@@ -452,7 +513,10 @@ main {
     width: 100%;
     height: 30px;
     gap: 80px;
-    border: 1px solid white;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px 10px 0 0;
+    
 }
 #valor-aluguel > h4, p {margin: 0; padding: 0; color: white;}
 
@@ -461,21 +525,34 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 0 0 10px 10px;
 }
 
 #bnt-finalizar-compra, #bnt-cancelar-compra {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid white;
+    box-shadow: 0 0 10px var(--rosa-Neon);
     width: 100%;
+
 }
 
+#bnt-finalizar-compra {border-right: 1px solid var(--rosa-Neon); border-radius: 0 0 0 10px;}
+#bnt-cancelar-compra {border-left: 1px solid var(--rosa-Neon); border-radius: 0 0 10px 0;}
+
+
+/* forma de pagamento */
 #forma-pagamento {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
+    height: 690px;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 10px;
 }
 
 #container-forma-pagamento {
@@ -484,6 +561,7 @@ main {
     width: 100%;
     height: 625px;
     gap: 20px;
+    padding: 5px;
 }
 
 #escolha-forma-pagamento{
@@ -492,7 +570,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 35px;
+    gap: 30px;
 }
 
 .escolher-forma {
@@ -508,7 +586,7 @@ main {
     justify-content: left;
     gap: 25px; 
     width: 100%;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--rosa-Neon);
 }
 
 .titulo-escolher-forma > h4, i {color: white; margin: 0;}
@@ -518,7 +596,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding-top: 30px;
     gap: 50px;
 }
 
@@ -535,8 +613,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+    padding:  0 10px;
 }
+
 #titulo-qrcod > p {font-size: 18px;}
 #titulo-copia-cola > p {font-size: 18px;}
 
@@ -556,7 +638,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 #codigo-pix {
@@ -565,6 +647,9 @@ main {
     justify-content: center;
     width: 150px;
     background-color: white;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    border-radius: 10px;
     padding: 0 20px;
     overflow: hidden;
 }
@@ -576,5 +661,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 120px;
-    border: 1px solid white;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    border-radius: 10px;
 }
