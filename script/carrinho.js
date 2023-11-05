@@ -1,4 +1,7 @@
 
+export function escolhaMesaGrupo() {};
+export function escolhaMesaSolo () {};
+
 /* conteudo da mesa de grupo*/
 const listaMesasDeGrupo = [
     {

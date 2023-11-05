@@ -1,5 +1,5 @@
-import escolhaMesaSolo from '../script/carrinho.js';
-import escolhaMesaGrupo from '../script/carrinho.js';
+import escolhaMesaSolo from 'carrinho.js';
+import escolhaMesaGrupo from 'carrinho.js';
 
 // reserve seu pc
 const bntReserveSeuPc = document.querySelector("#bntInfos");
