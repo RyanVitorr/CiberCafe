@@ -202,14 +202,14 @@ main {
 #bntInfos > button > a {color: black;}
 
 #cards-tipos-pcs {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     gap: 10px;
 }
-
+#cards-tipos-pcs.ativo {display: flex;}
 .card {
     display: flex;
     flex-direction: column;
@@ -321,7 +321,7 @@ main {
     max-height: 690px;
     border-radius: 10px;
     gap: 10px;
-    padding: 15px;
+    padding: 15px 0;
 }
 
 #titulo-e-container {
@@ -346,6 +346,7 @@ main {
 .titulo-pagamento > h4 {
     color: white; 
     text-align: center;
+    margin: 0;
 }
 
 .titulo {
@@ -426,7 +427,7 @@ main {
     border-radius: 10px;
 }
 
-#titulo-escolha-compra > h4 {color: white;}
+#titulo-escolha-compra > h4 {color: white; margin: 0;}
 
 
 #card-escolha-compra {
@@ -455,7 +456,6 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
-
 }
 
 .tempo-aluguel-mesa-escolhida {
@@ -501,13 +501,21 @@ main {
     border: 1px solid var(--azul-Neon);
     box-shadow: 0 0 10px var(--azul-Neon);
     border-radius: 5px;
+    cursor: pointer;
 }
 
-.bnt-aluguel > input {
+.area-tempo-aluguel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
+    height: 30px;
     border: 1px solid var(--azul-Neon);
     box-shadow: 0 0 10px var(--azul-Neon);
+    border-radius: 5px;
+    background-color: white;
 }
+.area-tempo-aluguel > p {color: black;}
 
 #aluguel-container {
     display: flex;
@@ -548,6 +556,7 @@ main {
     justify-content: center;
     box-shadow: 0 0 10px var(--rosa-Neon);
     width: 100%;
+    cursor: pointer;
 
 }
 
@@ -599,6 +608,7 @@ main {
     gap: 25px; 
     width: 100%;
     border-bottom: 1px solid var(--rosa-Neon);
+    cursor: pointer;
 }
 
 .titulo-escolher-forma > h4, i {color: white; margin: 0;}
@@ -677,5 +687,6 @@ main {
     border: 1px solid var(--rosa-Neon);
     box-shadow: 0 0 10px var(--azul-Neon);
     border-radius: 10px;
+    cursor: pointer;
 }
 #bnt-copia > p {text-align: center; width: 100%;}

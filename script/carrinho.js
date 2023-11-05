@@ -1,9 +1,5 @@
 
-
-
-
 /* conteudo da mesa de grupo*/
-
 const listaMesasDeGrupo = [
     {
         idMesa: "1",
@@ -23,18 +19,18 @@ const listaMesasDeGrupo = [
     },
 ];
 
-for (const itensMesas of listaMesasDeGrupo) {
-    const mesas = 
-       `<div class="caixaMesas">
-            <i class="${itensMesas.iconeMesa}"></i>
-        </div>`;
-
-    document.querySelector("#mesasGrupo").innerHTML += mesas;
+function escolhaMesaGrupo () {
+    for (const itensMesas of listaMesasDeGrupo) {
+        const mesas = 
+           `<div class="caixaMesas">
+                <i class="${itensMesas.iconeMesa}"></i>
+            </div>`;
+    
+        document.querySelector("#mesasGrupo").innerHTML += mesas;
+    };    
 };
 
-
 /* conteudo mesa solo*/
-
 const listaMesasSolo = [
     {
         idMesa: "1",
@@ -66,16 +62,16 @@ const listaMesasSolo = [
     },
 ];
 
-for (const itensMesas of listaMesasSolo) {
-    const mesas = 
-       `<div class="caixaMEsaSolo">
-            <i class="${itensMesas.iconeMesa}"></i> 
-        </div>`;
-
-    document.querySelector("#mesasSolo").innerHTML += mesas;
+function escolhaMesaSolo () {
+    for (const itensMesas of listaMesasSolo) {
+        const mesas = 
+           `<div class="caixaMEsaSolo">
+                <i class="${itensMesas.iconeMesa}"></i> 
+            </div>`;
+    
+        document.querySelector("#mesasSolo").innerHTML += mesas;
+    };    
 };
-
-
 
 // funcionalidade do botão eliminar
 
