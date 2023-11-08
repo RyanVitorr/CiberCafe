@@ -1,9 +1,18 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     list-style: none;
+    overflow: hidden;
+}
+
+:root {
+    --azul-Neon: #51fff9;
+    --rosa-Neon: #ff7af1;
+    --branco: white;
 }
 
 #bannerCardapio {
@@ -12,6 +21,9 @@
     justify-content: center;
     width: 100%;
     height: 35vh;
+    background-image: url(../img/comida.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 #conteudoBannerCardapio {
@@ -23,7 +35,11 @@
     height: 100%;
 }
 
-#conteudoBannerCardapio > h2 { text-align: center;}
+#conteudoBannerCardapio > h2 { 
+    text-align: center; 
+    color: white;
+    font-family: 'Black Ops One';
+}
 
 #cardapio {
     display: flex;
@@ -32,7 +48,6 @@
     align-items: center;
     width: 100%;
     height: 100%;
-
 }
 
 #listCardapio {
@@ -42,9 +57,12 @@
     width: 100%;
     max-width: 900px;
     height: 35px;
-    background-color: black;
     position: sticky;
     top: 0;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    background-color: white;
+    
 }
 
 #listCardapio > ul {
@@ -59,7 +77,7 @@
 .barraSeparaList {
     width: 1px;
     height: 100%;
-    background-color: white;
+    background-color: var(--rosa-Neon);
 }
 
 #listCardapio > ul > li {
@@ -70,7 +88,7 @@
     height: 100%;
 }
 
-#listCardapio > ul > li {color: white;}
+#listCardapio > ul > li {color: black;}
 
 #containerCardapio {
     display: flex;
@@ -113,8 +131,11 @@
     justify-content: center;
     width: 100%;
     height: 30px;
-    background-color: black;
+    background-color: white;
     border-radius: 10px;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    cursor: pointer;
 }
 
-.bntComprar > p {color: white;}
+.bntComprar > p {color: black;}
