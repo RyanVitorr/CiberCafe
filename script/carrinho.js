@@ -33,6 +33,11 @@ function escolhaMesaGrupo () {
     };    
 };
 
+const mesaGrupo = document.querySelector("#mesa-grupo");
+
+mesaGrupo.addEventListener("click", mesaGrupo())
+
+
 /* conteudo mesa solo*/
 const listaMesasSolo = [
     {
