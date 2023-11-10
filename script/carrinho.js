@@ -1,41 +1,126 @@
 
-export function escolhaMesaGrupo() {};
-export function escolhaMesaSolo () {};
-
 /* conteudo da mesa de grupo*/
+
+const containerEscolherMesas = document.querySelector(".mesas-card");
+const bntMesaGrupo = document.querySelector("#mesa-grupo");
+const sectionAluguel = document.querySelector("#aluguel");
+const mesas = document.querySelectorAll(".mesas");
+const escolhaCompra = document.querySelector("#card-escolha-compra");
+
+
 const listaMesasDeGrupo = [
     {
         idMesa: "1",
-        iconeMesa: "fa-solid fa-computer"
+        iconeMesa: "fa-solid fa-computer",
+        imgMesa: "fe",
     },
     {
         idMesa: "2",
-        iconeMesa: "fa-solid fa-computer"
+        iconeMesa: "fa-solid fa-computer",
+        imgMesa: "fe",
     },
     {
         idMesa: "3",
-        iconeMesa: "fa-solid fa-computer"
+        iconeMesa: "fa-solid fa-computer",
+        imgMesa: "fe",
     },
     {
         idMesa: "4",
-        iconeMesa: "fa-solid fa-computer"
-    },
+        iconeMesa: "fa-solid fa-computer",
+        imgMesa: "fe",
+    }
 ];
 
 function escolhaMesaGrupo () {
     for (const itensMesas of listaMesasDeGrupo) {
         const mesas = 
-           `<div class="caixaMesas">
+           `<div class="mesas" id="${itensMesas.idMesa}">
                 <i class="${itensMesas.iconeMesa}"></i>
             </div>`;
     
-        document.querySelector("#mesasGrupo").innerHTML += mesas;
+        containerEscolherMesas.innerHTML += mesas;
     };    
 };
 
-const mesaGrupo = document.querySelector("#mesa-grupo");
+bntMesaGrupo.addEventListener("click", () => {
+    if (sectionAluguel.style.display == "") {
+        sectionAluguel.style.display = "flex";
+    }
+    escolhaMesaGrupo()
+});
 
-mesaGrupo.addEventListener("click", mesaGrupo())
+
+
+const EscolheuMesa = `  <div class="card-mesa-escolhida">
+                            <div class="img-card-mesa-escolhida">
+                                <img src="#" alt="">
+                            </div>
+
+                            <div class="infos-card-mesa-escolhida">
+                                <div class="nome-mesa-escolhida">
+                                    <span>Mesa de Grupo 1</span>
+                                </div>
+
+                                <div class="tempo-aluguel-mesa-escolhida">
+                                    <div class="titulo-tempo-aluguel">
+                                        <p>Tempo aluguel:</p>
+                                    </div>
+
+                                    <div class="bnt-aluguel">
+                                        <button class="bnt-esquerda" type="button"></button>
+
+                                        <div class="area-tempo-aluguel">
+                                            <p>1</p>
+                                        </div>
+
+                                        <button class="bnt-direita" type="button"></button>
+
+                                        <button type="button" class="bnt-escluir"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> `;
+
+
+mesas.length(mesa);
+
+mesa.addEventListener("click", () => {
+    escolhaCompra.innerHTML += EscolheuMesa;
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* conteudo mesa solo*/
