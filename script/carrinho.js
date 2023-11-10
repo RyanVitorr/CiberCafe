@@ -4,7 +4,7 @@
 const containerEscolherMesas = document.querySelector(".mesas-card");
 const bntMesaGrupo = document.querySelector("#mesa-grupo");
 const sectionAluguel = document.querySelector("#aluguel");
-const mesas = document.querySelectorAll(".mesas");
+const mesa = document.querySelectorAll(".mesas");
 const escolhaCompra = document.querySelector("#card-escolha-compra");
 
 
@@ -51,7 +51,7 @@ bntMesaGrupo.addEventListener("click", () => {
 
 
 
-const EscolheuMesa = `  <div class="card-mesa-escolhida">
+const escolheuMesa = `  <div class="card-mesa-escolhida">
                             <div class="img-card-mesa-escolhida">
                                 <img src="#" alt="">
                             </div>
@@ -82,14 +82,13 @@ const EscolheuMesa = `  <div class="card-mesa-escolhida">
                         </div> `;
 
 
-mesas.length(mesa);
 
-mesa.addEventListener("click", () => {
-    escolhaCompra.innerHTML += EscolheuMesa;
-})
-
-
-
+mesa.forEach((mesaItem) => {
+    mesaItem.addEventListener("click", () => {
+        escolhaCompra.innerHTML += escolheuMesa;
+    })
+    
+});
 
 
 
