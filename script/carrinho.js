@@ -4,8 +4,7 @@
 const containerEscolherMesas = document.querySelector(".mesas-card");
 const bntMesaGrupo = document.querySelector("#mesa-grupo");
 const sectionAluguel = document.querySelector("#aluguel");
-const mesa = document.querySelectorAll(".mesas");
-const escolhaCompra = document.querySelector("#card-escolha-compra");
+
 
 
 const listaMesasDeGrupo = [
@@ -49,8 +48,8 @@ bntMesaGrupo.addEventListener("click", () => {
     escolhaMesaGrupo()
 });
 
-
-
+let mesa = document.querySelectorAll(".mesas");
+const escolhaCompra = document.querySelector("#card-escolha-compra");
 const escolheuMesa = `  <div class="card-mesa-escolhida">
                             <div class="img-card-mesa-escolhida">
                                 <img src="#" alt="">
@@ -67,32 +66,44 @@ const escolheuMesa = `  <div class="card-mesa-escolhida">
                                     </div>
 
                                     <div class="bnt-aluguel">
-                                        <button class="bnt-esquerda" type="button"></button>
+                                        <button class="bnt-hora" id="bnt-esquerda" type="button"></button>
 
                                         <div class="area-tempo-aluguel">
                                             <p>1</p>
                                         </div>
 
-                                        <button class="bnt-direita" type="button"></button>
+                                        <button class="bnt-hora"  id="bnt-direita" type="button"></button>
 
-                                        <button type="button" class="bnt-escluir"></button>
+                                        <button type="button" class="bnt-excluir"></button>
                                     </div>
                                 </div>
                             </div>
                         </div> `;
 
 
-
-mesa.forEach((mesaItem) => {
-    mesaItem.addEventListener("click", () => {
+for(let i=0; i < mesa.length; i++) {
+    let mesas = mesa[i];
+    mesas.addEventListener("click", () => {
         escolhaCompra.innerHTML += escolheuMesa;
-    })
+    });
+};
+
+function addInfoMesa() {
     
-});
+    escolhaCompra.innerHTML += escolheuMesa;
+};
+// função botao eliminar compra
 
 
+const bntEliminarItem = document.querySelectorAll("bnt-excluir");
+for(let i=0; i < bntEliminarItem.length; i++) {
+    let bnt = bntEliminarItem[i];
+    bnt.addEventListener("click", eliminarItemCarrinho);
+};
 
-
+function eliminarItemCarrinho() {
+    escolheuMesa.remove();
+};
 
 
 
