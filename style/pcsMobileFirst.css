@@ -331,6 +331,7 @@ main {
     justify-content: center;
     width: 100%;
     gap: 25px;
+    padding: 10px;
 }
 
 .titulo-pagamento {
@@ -386,6 +387,9 @@ main {
     box-shadow: 0 0 10px var(--branco);
     cursor: pointer;
 }
+
+.mesas > i {color: white;}
+
 .mesas:nth-child(2){
     background-color: red; 
     cursor: not-allowed; 
@@ -400,293 +404,97 @@ main {
 }
 .mesas:hover:not(:nth-child(2)):not(:nth-child(4)) {background-color: green; box-shadow: 0 0 10px rgb(100, 255, 100); border: 1px solid rgb(100, 255, 100);} 
 
-#container-valor-aluguel {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
+/* carrinho */
 
-#escolha-compra {
+#carrinho {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 25px;
     width: 100%;
     padding: 10px;
-    gap: 15px;
 }
 
-#titulo-escolha-compra {
+#titulo-carrinho {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10px;
+    padding: 10px;
     border: 1px solid var(--rosa-Neon);
     box-shadow: 0 0 10px var(--rosa-Neon);
     border-radius: 10px;
+
+}
+#conteudo-titulo-carrinho > h4 {color: white; margin: 0;}
+
+#item-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#titulo-escolha-compra > h4 {color: white; margin: 0;}
-
-
-#card-escolha-compra {
+#conteudo-item-carrinho {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
+    padding: 10px;
 }
 
-.card-mesa-escolhida {
+.card-item-carrinho {
     display: flex;
-    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     border: 1px solid var(--rosa-Neon);
     box-shadow: 0 0 10px var(--rosa-Neon);
     border-radius: 10px;
 }
 
-.img-card-mesa-escolhida {
+.img-item-carrinho {
     display: flex;
     width: 120px;
+    height: 120px;
+    border-radius: 10px;
 }
-.img-card-mesa-escolhida > img {width: 100%;}
 
-.infos-card-mesa-escolhida {
+.img-item-carrinho > img {width: 100%;}
+
+.infos-item-carrinho {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.tempo-aluguel-mesa-escolhida {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 5px;
-}
-
-.nome-mesa-escolhida {
-    display: flex;
+    align-content: center;
     justify-content: center;
     width: 100%;
 }
 
-.nome-mesa-escolhida > span {color: white; text-align: center;}
-
-.titulo-tempo-aluguel {
+.nome-item-carrinho, .bnt-carrinho {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-}
-
-.titulo-tempo-aluguel > p {text-align: center;}
-
-.bnt-aluguel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 5px;
-}
-
-.bnt-aluguel > button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--azul-Neon);
-    box-shadow: 0 0 10px var(--azul-Neon);
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.area-tempo-aluguel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--azul-Neon);
-    box-shadow: 0 0 10px var(--azul-Neon);
-    border-radius: 5px;
-    background-color: white;
-}
-.area-tempo-aluguel > p {color: black;}
-
-#aluguel-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    width: 100%;
-    height: 100%;
     
 }
 
-#valor-aluguel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 30px;
-    gap: 80px;
-    border: 1px solid var(--rosa-Neon);
-    box-shadow: 0 0 10px var(--rosa-Neon);
-    border-radius: 10px 10px 0 0;
-    
-}
-#valor-aluguel > h4, p {margin: 0; padding: 0; color: white;}
-
-#pagar-cancelar-compra {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    border: 1px solid var(--rosa-Neon);
-    box-shadow: 0 0 10px var(--rosa-Neon);
-    border-radius: 0 0 10px 10px;
-}
-
-#bnt-finalizar-compra, #bnt-cancelar-compra {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px var(--rosa-Neon);
-    width: 100%;
-    cursor: pointer;
-
-}
-
-#bnt-finalizar-compra {border-right: 1px solid var(--rosa-Neon); border-radius: 0 0 0 10px;}
-#bnt-cancelar-compra {border-left: 1px solid var(--rosa-Neon); border-radius: 0 0 10px 0;}
-
-
-/* forma de pagamento */
-#forma-pagamento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 690px;
-    border-radius: 10px;
-    gap: 10px;
-    padding: 10px;
-}
-
-#container-forma-pagamento {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 625px;
-    gap: 20px;
-    padding: 5px;
-}
-
-#escolha-forma-pagamento{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 30px;
-}
-
-.escolher-forma {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 10px;
-}
-
-.titulo-escolher-forma {
-    display: flex; 
-    align-items: center; 
-    justify-content: left;
-    gap: 25px; 
-    width: 100%;
-    border-bottom: 1px solid var(--rosa-Neon);
-    cursor: pointer;
-}
-
-.titulo-escolher-forma > h4, i {color: white; margin: 0;}
-
-
-.conteudo-forma-pagamento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-    gap: 50px;
-}
-
-#qrcod, #pix-copia-cola {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 20px;
-}
-
-#titulo-qrcod, #titulo-copia-cola {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--rosa-Neon);
-    box-shadow: 0 0 10px var(--rosa-Neon);
-    border-radius: 10px;
-    padding:  0 10px;
-}
-
-#titulo-qrcod > p {font-size: 18px;}
-#titulo-copia-cola > p {font-size: 18px;}
-
-#imagem-qrcod {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-}
-
-
-#imagem-qrcod > img {
-    width: 100%;
-}
-
-#conteudo-pix  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-#codigo-pix {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
+.bnt-carrinho {
+    width: 90px;
     background-color: white;
-    border: 1px solid var(--azul-Neon);
-    box-shadow: 0 0 10px var(--azul-Neon);
+    gap: 4px;
     border-radius: 10px;
-    padding: 0 20px;
-    overflow: hidden;
 }
 
-#codigo-pix > p {color: black; text-align: center; width: 100%;}
-
-#bnt-copia {
+.bnt-item-carrinho {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    border: 1px solid var(--rosa-Neon);
-    box-shadow: 0 0 10px var(--azul-Neon);
-    border-radius: 10px;
-    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 7px;
 }
-#bnt-copia > p {text-align: center; width: 100%;}
+
+.numero-hors-item-carrinho {
+    width: 20px;
+    height: 20px;
+}
