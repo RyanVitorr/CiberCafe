@@ -49,32 +49,35 @@ bntMesaGrupo.addEventListener("click", () => {
 });
 
 // ao clicar na mesa que deseja 
-const escolheuMesa = `  <div class="card-mesa-escolhida">
-                            <div class="img-card-mesa-escolhida">
+const divAddCardCarrinho = document.querySelector("#conteudo-item-carrinho");
+var mesas = document.querySelectorAll(".mesas");
+const escolheuMesa = `
+                        <div class="card-item-carrinho">
+                            <div class="img-item-carrinho">
                                 <img src="#" alt="">
                             </div>
 
-                            <div class="infos-card-mesa-escolhida">
-                                <div class="nome-mesa-escolhida">
+                            <div class="infos-item-carrinho">
+                                <div class="nome-item-carrinho">
                                     <span>Mesa de Grupo 1</span>
                                 </div>
 
-                                <div class="tempo-aluguel-mesa-escolhida">
-                                    <div class="titulo-tempo-aluguel">
-                                        <p>Tempo aluguel:</p>
+                                <div class="bnt-carrinho">
+                                    <div class="bnt-pri">
+                                        <button class="bnt-item-carrinho"></button>
+                                        <div class="numero-hors-item-carrinho"><p>1</p></div>
+                                        <button class="bnt-item-carrinho"></button>
                                     </div>
 
-                                    <div class="bnt-aluguel">
-                                        <button class="bnt-hora" id="bnt-esquerda" type="button"></button>
-
-                                        <div class="area-tempo-aluguel">
-                                            <p>1</p>
-                                        </div>
-
-                                        <button class="bnt-hora"  id="bnt-direita" type="button"></button>
-
-                                        <button type="button" class="bnt-excluir"></button>
+                                    <div class="bnt-seg">
+                                        <button class="bnt-excluir"></button>
                                     </div>
                                 </div>
                             </div>
-                        </div> `;
+                        </div>`;
+
+mesas.forEach((itens) => {
+    itens.addEventListener("click", () => {
+        console.log("clicou");
+    });
+});

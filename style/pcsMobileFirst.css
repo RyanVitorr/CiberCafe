@@ -447,7 +447,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
     border: 1px solid var(--rosa-Neon);
     box-shadow: 0 0 10px var(--rosa-Neon);
     border-radius: 10px;
