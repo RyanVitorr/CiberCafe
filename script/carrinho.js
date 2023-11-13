@@ -48,8 +48,7 @@ bntMesaGrupo.addEventListener("click", () => {
     escolhaMesaGrupo()
 });
 
-let mesa = document.querySelectorAll(".mesas");
-const escolhaCompra = document.querySelector("#card-escolha-compra");
+// ao clicar na mesa que deseja 
 const escolheuMesa = `  <div class="card-mesa-escolhida">
                             <div class="img-card-mesa-escolhida">
                                 <img src="#" alt="">

@@ -468,6 +468,8 @@ main {
     align-content: center;
     justify-content: center;
     width: 100%;
+    gap: 10px;
+    padding: 8px;
 }
 
 .nome-item-carrinho, .bnt-carrinho {
@@ -478,9 +480,19 @@ main {
 }
 
 .bnt-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 90px;
+    gap: 20px;
+    width: 100%;
+}
+
+.bnt-pri {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: white;
-    gap: 4px;
     border-radius: 10px;
 }
 
@@ -491,10 +503,33 @@ main {
     width: 20px;
     height: 20px;
     border: none;
-    border-radius: 7px;
+    border-radius: 10px;
 }
 
 .numero-hors-item-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 20px;
     height: 20px;
+}
+
+.numero-hors-item-carrinho > p {color: black;}
+
+.bnt-seg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.bnt-excluir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 10px;
 }
