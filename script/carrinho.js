@@ -33,7 +33,7 @@ const listaMesasDeGrupo = [
 function escolhaMesaGrupo () {
     for (const itensMesas of listaMesasDeGrupo) {
         const mesas = 
-           `<div class="mesas" id="${itensMesas.idMesa}">
+           `<div class="mesas" id="${itensMesas.idMesa}" onclick="addMesaEscolhida()">
                 <i class="${itensMesas.iconeMesa}"></i>
             </div>`;
     
@@ -50,7 +50,6 @@ bntMesaGrupo.addEventListener("click", () => {
 
 // ao clicar na mesa que deseja 
 const divAddCardCarrinho = document.querySelector("#conteudo-item-carrinho");
-var mesas = document.querySelectorAll(".mesas");
 const escolheuMesa = `
                         <div class="card-item-carrinho">
                             <div class="img-item-carrinho">
@@ -70,14 +69,22 @@ const escolheuMesa = `
                                     </div>
 
                                     <div class="bnt-seg">
-                                        <button class="bnt-excluir"></button>
+                                        <button class="bnt-excluir" onclick="excluirItemCarrinho(event)"></button>
                                     </div>
                                 </div>
                             </div>
                         </div>`;
+var i = 0;
 
-mesas.forEach((itens) => {
-    itens.addEventListener("click", () => {
-        console.log("clicou");
-    });
-});
+function addMesaEscolhida() {
+    divAddCardCarrinho.innerHTML = escolheuMesa;
+    i = 1;
+    console.log(i);
+}
+
+
+// ao clicar no botão de excluir item do carrinho 
+
+function excluirItemCarrinho(event) {
+    event.target.parentElement.parentElement.parentElement.parentElement.remove();
+};
