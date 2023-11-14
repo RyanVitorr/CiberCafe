@@ -455,7 +455,7 @@ main {
 
 .img-item-carrinho {
     display: flex;
-    width: 120px;
+    width: 140px;
     height: 120px;
     border-radius: 10px;
 }
@@ -470,6 +470,7 @@ main {
     width: 100%;
     gap: 10px;
     padding: 8px;
+    text-align: center;
 }
 
 .nome-item-carrinho, .bnt-carrinho {
@@ -479,11 +480,15 @@ main {
     
 }
 
+.div-preco-mesa > span {
+    font-size: 15px;
+}
+
 .bnt-carrinho {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90px;
+    width: 100%;
     gap: 20px;
     width: 100%;
 }
@@ -496,6 +501,11 @@ main {
     border-radius: 10px;
 }
 
+.bnt-pri > input {
+    width: 40px;
+    height: 25px;
+}
+
 .bnt-item-carrinho {
     display: flex;
     align-items: center;
@@ -505,14 +515,6 @@ main {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-}
-
-.numero-hors-item-carrinho {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
 }
 
 .numero-hors-item-carrinho > p {color: black;}
@@ -529,10 +531,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* finalizar compra */
@@ -546,7 +549,6 @@ main {
     padding: 10px;
 
 }
-
 
 #preco-compra {
     display: flex;
