@@ -1,11 +1,19 @@
-/* global */
+// principais --------------------------------------------------------------------------
 const containerEscolherMesas = document.querySelector(".mesas-card");
 const divAddCardCarrinho = document.querySelector("#conteudo-item-carrinho");
-
-/* conteudo da mesa de grupo*/
-
-const bntMesaGrupo = document.querySelector("#mesa-grupo");
 const sectionAluguel = document.querySelector("#aluguel");
+
+// ao clicar na mesa de grupo ----------------------------------------------------------
+const bntMesaGrupo = document.querySelector("#mesa-grupo");
+bntMesaGrupo.addEventListener("click", () => {
+    if (sectionAluguel.style.display == "") {
+        sectionAluguel.style.display = "flex";
+    }
+    escolhaMesaGrupo()
+    pegarValorAluguel()
+});
+
+
 const listaMesasDeGrupo = [
     {
         idMesa: "1",
@@ -30,6 +38,16 @@ const listaMesasDeGrupo = [
 ];
 
 function escolhaMesaGrupo () {
+    // apaga o item que  tiver no carrinho
+    const cardItemCarrinho = document.querySelectorAll(".card-item-carrinho");
+    cardItemCarrinho.forEach((cardItemCarrinho) => {cardItemCarrinho.remove();});
+    valorTotal = 0
+ 
+    // apaga as opções de mesas
+    const mesa = document.querySelectorAll(".mesas")
+    mesa.forEach((mesa) => {mesa.remove();});
+    
+    // gera as opções de mesas
     for (const itensMesas of listaMesasDeGrupo) {
         var mesas = 
            `<div class="mesas" id="${itensMesas.idMesa}" onclick="addMesaEscolhidaGrupo()">
@@ -38,65 +56,11 @@ function escolhaMesaGrupo () {
     
         containerEscolherMesas.innerHTML += mesas;
     };    
-    
-   
 };
 
-// adicionar html escolha mesa  
-
-const htmlMesaEscolha =`<div id="selecionar-mesa">
-                            <div id="titulo-e-container">
-                                <div class="titulo-pagamento">
-                                    <h4>Escolha sua mesa</h4>
-                                </div>
-    
-                                <div id="conteudo-selecionar-mesa">
-                                    <div class="mesas-card">
-            
-                                    </div>
-                                /div>
-                            </div>
-
-                            <div id="carrinho">
-                                <div id="titulo-carrinho">
-                                    <div id="conteudo-titulo-carrinho">
-                                        <h4>Seu Carrinho</h4>
-                                    </div>
-                                </div>
-
-                                <div id="item-carrinho">
-                                    <div id="conteudo-item-carrinho"></div>
-                                </div>
-
-                                <div id="finalizar-compra">
-                                    <div id="preco-compra">
-                                        <div id="conteudo-preco-compra">
-                                            <div class="div-conteudo-preeco-compra">
-                                                <span>Total:</span>
-                                            </div>
-                                            <div class="div-conteudo-preeco-compra">
-                                            <p id="valor-a-pagar">100,00$R</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="conteudo-finalizar-compra">
-                                        <div class="comprar-cancelar"><span>Comprar</span></div>
-                                        <div class="comprar-cancelar"><span>Cancelar</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>`
-
-bntMesaGrupo.addEventListener("click", () => {
-    if (sectionAluguel.style.display == "") {
-        sectionAluguel.style.display = "flex";
-    }
-    escolhaMesaGrupo()
-});
 
 
-// ao clicar na mesa de grupo que deseja do 
-
+// ao clicar na mesa de grupo que deseja 
 const escolheuMesaGrupo = `
                         <div class="card-item-carrinho">
                             <div class="img-item-carrinho">
@@ -115,7 +79,7 @@ const escolheuMesaGrupo = `
                                 
                                 <div class="bnt-carrinho">
                                     <div class="bnt-pri">
-                                        <input class="input-aluguel" type="number" value="1" max="10" onclick="atualizarTotal()">  
+                                        <input class="input-aluguel" type="number" value="1" max="10" min="1" onclick="atualizarTotal()">  
                                     </div>
 
                                     <div class="bnt-seg">
@@ -133,9 +97,16 @@ function addMesaEscolhidaGrupo() {
 }
 
 
+// ao clicar na mesa solo --------------------------------------------------------------
 
-/* conteudo mesa solo */
 const bntMesaSolo = document.querySelector("#mesa-solo");
+bntMesaSolo.addEventListener("click", () => {
+    if (sectionAluguel.style.display == "") {
+        sectionAluguel.style.display = "flex";
+    }
+    escolhaMesaSolo()
+    pegarValorAluguel()
+});
 
 const listaMesasSolo = [
     {
@@ -167,22 +138,29 @@ const listaMesasSolo = [
 ];
 
 function escolhaMesaSolo () {
+    // apaga o item que  tiver no carrinho
+    const cardItemCarrinho = document.querySelectorAll(".card-item-carrinho");
+    cardItemCarrinho.forEach((cardItemCarrinho) => {cardItemCarrinho.remove();});
+    valorTotal = 0
+    
+    // apaga as opções de mesas
+    const mesa = document.querySelectorAll(".mesas")
+    mesa.forEach((mesa) => {mesa.remove();});
+    
+    // gera as opções de mesas
     for (const itensMesas of listaMesasSolo) {
         var mesas = 
            `<div class="mesas" id="${itensMesas.idMesa}" onclick="addMesaEscolhidaSolo()">
                 <i class="${itensMesas.iconeMesa}"></i>
             </div>`;
-    
+        
+        
         containerEscolherMesas.innerHTML += mesas;
-    };    
-};
 
-bntMesaSolo.addEventListener("click", () => {
-    if (sectionAluguel.style.display == "") {
-        sectionAluguel.style.display = "flex";
-    }
-    escolhaMesaSolo()
-});
+    };    
+
+
+};
 
 // ao clicar na mesa solo que deseja
 
@@ -204,7 +182,7 @@ const escolheuMesaSolo = `
 
                                 <div class="bnt-carrinho">
                                     <div class="bnt-pri">       
-                                        <input class="input-aluguel" type="number" value="1" max="10" onclick="atualizarTotal()">                                      
+                                        <input class="input-aluguel" type="number" value="1" max="10" min="1" onclick="atualizarTotal()">                                      
                                     </div>
 
                                     <div class="bnt-seg">
@@ -222,33 +200,159 @@ function addMesaEscolhidaSolo() {
 };
                    
 
+// ao clicar no neuro dance ------------------------------------------------------------
+
+const bntNeuroDance = document.querySelector("#neuro-dance");
+bntNeuroDance.addEventListener("click", () => {
+    if (sectionAluguel.style.display == "") {
+        sectionAluguel.style.display = "flex";
+    }
+    escolhaNeuroDance()
+    pegarValorAluguel()
+});
+
+const listaCabineNeuroDance = [
+    {
+        idMesa: "1",
+        iconeMesa: "fa-solid fa-computer",
+        imgMesa: "fe",
+    },
+    {
+        idMesa: "2",
+        iconeMesa: "fa-solid fa-computer",
+        imgMesa: "fe",
+    },
+];
+
+function escolhaNeuroDance () {
+    // apaga o item que  tiver no carrinho
+    const cardItemCarrinho = document.querySelectorAll(".card-item-carrinho");
+    cardItemCarrinho.forEach((cardItemCarrinho) => {ccardItemCarrinho.remove();});
+    valorTotal = 0
+    
+    // apaga as opções de mesas
+    const mesa = document.querySelectorAll(".mesas")
+    mesa.forEach((mesa) => {mesa.remove();});
+    
+    // gera as opções de mesas
+    for (const itensNeuro of listaCabineNeuroDance) {
+        var mesas = 
+           `<div class="mesas" id="${itensNeuro.idMesa}" onclick="addNeuroDanceEscolhido()">
+                <i class="${itensNeuro.iconeMesa}"></i>
+            </div>`;
+        containerEscolherMesas.innerHTML += mesas;
+
+    };    
+};
 
 
-// pegar valor aluguel 
+// ao clicar no neuro dance que deseja 
+
+const escolheuNeuroDance = `
+                        <div class="card-item-carrinho">
+                            <div class="img-item-carrinho">
+                                <img src="#" alt="">
+                            </div>
+
+                            <div class="infos-item-carrinho">
+                                <div class="nome-item-carrinho">
+                                    <span>Neuro Dance</span>
+                                </div>
+
+                                <div class="div-preco-mesa">
+                                   <span>Preço: </span> 
+                                   <span class="valor-preco">R$250,00</span>
+                                </div>
+
+                                <div class="bnt-carrinho">
+                                    <div class="bnt-pri">       
+                                        <input class="input-aluguel" type="number" value="1" max="10" min="1" onclick="atualizarTotal()">                                      
+                                    </div>
+
+                                    <div class="bnt-seg">
+                                        <button class="bnt-excluir" onclick="excluirItemCarrinho(event)"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+
+function addNeuroDanceEscolhido() {
+    valorTotal = 0
+    divAddCardCarrinho.innerHTML = escolheuNeuroDance;
+    pegarValorAluguel()
+};
+                            
+
+// pegar valor aluguel ---------------------------------------------------------------
 const cardItemMesa = document.getElementsByClassName("card-item-carrinho");
-let valorTotal = 0;
+let valorTotal = "0,00";
 
 function pegarValorAluguel() {
     for(var i=0; i < cardItemMesa.length; i++) {
-        console.log(cardItemMesa[i]);
         const precoAluguel = cardItemMesa[i].getElementsByClassName("valor-preco")[0].innerText.replace("R$", "").replace(",", ".");
-        console.log(precoAluguel);
         const qtdHorasAlugadas = cardItemMesa[i].getElementsByClassName("input-aluguel")[0].value;
-        console.log(qtdHorasAlugadas);
-
-
         valorTotal += precoAluguel * qtdHorasAlugadas;
     };
-    console.log(valorTotal)
+
+    valorTotal = valorTotal.toFixed(2);
+    valorTotal = valorTotal.replace(".", ",");
+    document.querySelector("#valor-a-pagar").innerText = "R$" + valorTotal ;
 };
+
 
 function atualizarTotal() {
     valorTotal = 0;
     pegarValorAluguel()
 }
 
-// ao clicar no botão de excluir item do carrinho 
+// mudar valor total no carrinho
+
+
+
+// ao clicar no botão de excluir item do carrinho --------------------------------------
 function excluirItemCarrinho(event) {
     event.target.parentElement.parentElement.parentElement.parentElement.remove();
     valorTotal = 0;
+    pegarValorAluguel()
 };
+
+
+// bnt comprar ------------------------------------------------------------------------
+const bntComprar = document.querySelector("#comprar");
+const mostrarPagamento = document.querySelector("#pagamento");
+
+
+function comprar() {
+    if (valorTotal == "0,00") {
+        alert("Seu carrinho está vazio!")
+    } else {
+        mostrarPagamento.classList.toggle("ativo");
+    }
+}
+
+// ao clicar em cancelar --------------------------------------------------------------
+
+function cancelar() {
+
+    const cardItemCarrinho = document.querySelectorAll(".card-item-carrinho");
+    cardItemCarrinho.forEach((cardItemCarrinho) => {cardItemCarrinho.remove();});
+    
+    valorTotal = 0
+    pegarValorAluguel()
+
+    const mesa = document.querySelectorAll(".mesas")
+    mesa.forEach((mesa) => {mesa.remove();});
+
+    if (sectionAluguel.style.display == "flex") {
+        sectionAluguel.style.display = "";
+    }
+};
+
+
+// ao clicar em cartão -----------------------------------------------------------
+const conteudoCartao = document.querySelector("#conteudo-cartao");
+const cartao = document.querySelector("#cartao");
+
+cartao.addEventListener("click", () => {
+    conteudoCartao.classList.toggle("ativo");
+});

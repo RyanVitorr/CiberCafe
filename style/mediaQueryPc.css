@@ -16,7 +16,8 @@
         flex-direction: row;
     }
 
-   
+    .informacoes-cartao:nth-child(4), .informacoes-cartao:nth-child(3){flex-direction: row; gap: 20px;}
+
 }
 
 @media only screen and (min-width: 690px) {
@@ -30,10 +31,6 @@
     #selecionar-mesa {
         height: 80vh;
         padding: 15px;
-    }
-
-    #forma-pagamento {
-        height: 80vh;
     }
 
 }

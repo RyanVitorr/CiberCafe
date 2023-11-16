@@ -310,7 +310,8 @@ main {
     url(../img/backgroundCarrinho.jpg);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+}
 
 #selecionar-mesa {
     display: flex;
@@ -560,7 +561,7 @@ main {
     width: 100%;
 }
 
-.div-conteudo-preeco-compra {
+.div-conteudo-preco-compra {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -571,14 +572,14 @@ main {
 
 }
 
-.div-conteudo-preeco-compra > span {color: white;}
+.div-conteudo-preco-compra > span {color: white;}
 
 #conteudo-finalizar-compra {
     display: flex;
     width: 100%;
 }
 
-.comprar-cancelar {
+#conteudo-finalizar-compra > div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -589,4 +590,186 @@ main {
     width: 100%;
 }
 
-.comprar-cancelar > span {color: white;}
+#conteudo-finalizar-compra > div > span {color: white;}
+#comprar > a {color: white; text-decoration: none;}
+
+/* pagamento */
+
+#pagamento {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#pagamento.ativo {display: flex;}
+
+#container-pagamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    gap: 25px;
+    padding: 10px;
+    border: 1px solid var(--azul-Neon);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--azul-Neon);
+    background: 
+    linear-gradient(rgba(42, 64, 73, 0.795), rgba(42, 64, 73, 0.795)),
+    url(../img/backgroundCarrinho.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#forma-pagamento {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* pix */
+
+#pix {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 8px;
+    gap: 10px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+}
+
+.titulo-pagamento-cartao {
+    display: flex;
+    gap: 10px;
+}
+
+.titulo-pagamento-cartao > h4 {
+    color: white; 
+    text-align: center;
+    margin: 0;
+}
+
+#conteudo-pix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 0px;
+    gap: 50px;
+}
+
+#img-qrcod {
+    display: flex;
+    width: 240px;
+    height: 250px;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#img-qrcod > img {
+    width: 100%;
+}
+
+
+#codigo-copia-cola {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    border-radius: 10px;
+
+}
+
+#codigo-copia-cola > span {color: white;}
+
+/* cartao */ 
+
+#cartao {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 8px;
+    gap: 10px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+}
+
+#conteudo-cartao {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 0px;
+    gap: 20px;
+}
+
+#conteudo-cartao.ativo {display: flex;}
+
+#conteudo-cartao > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.informacoes-cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+}
+
+label {color: white;}
+
+input {
+    display: flex;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+}
+#validade {width: 60px;}
+#cvv {width: 60px;}
+
+#bnt-pagar-cartão {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#bnt-pagar-cartão > button { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    border-radius: 10px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+}
