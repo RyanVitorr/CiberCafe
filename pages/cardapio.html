@@ -13,27 +13,118 @@
             <div id="conteudoBannerCardapio">
                 <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
 
-                <div id="bntBannerCardapio">
-                    <p>dsefrefrgrg</p>
-                </div>
             </div>
         </section>
 
         <section id="cardapio">
             <div id="listCardapio">
                 <ul>
-                    <li id="hamburguer">hamburguer</li>
+                    <li id="hamburguer">Burguer</li>
                     <span class="barraSeparaList"></span>
-                    <li id="salgados">salgados</li>
+                    <li id="salgados">Salgados</li>
                     <span class="barraSeparaList"></span>
-                    <li id="bebidas">bebidas</li>
+                    <li id="bebidas">Bebidas</li>
                     <span class="barraSeparaList"></span>
-                    <li id="sobremesas">sobremesas</li>
+                    <li id="sobremesas">Sobremesas</li>
                 </ul>
             </div>
 
             <div id="containerCardapio">
-                <div class="menuCardapio"></div>
+                <div id="menuCardapio"></div>
+            </div>
+        </section>
+
+        <section id="comprar">
+            <div id="container-comprar"> 
+                   <div id="carrinho">
+                        <div id="titulo-carrinho">
+                            <div id="conteudo-titulo-carrinho">
+                                <h4>Seu Carrinho</h4>
+                            </div>
+                        </div>
+
+                        <div id="item-carrinho">
+                            <div id="conteudo-item-carrinho"></div>
+                        </div>
+
+                        <div id="finalizar-compra">
+                            <div id="preco-compra">
+                                <div id="conteudo-preco-compra">
+                                    <div class="div-conteudo-preco-compra">
+                                        <span>Total:</span>
+                                     </div>
+                                    <div class="div-conteudo-preco-compra">
+                                        <p id="valor-a-pagar">R$0,00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="conteudo-finalizar-compra">
+                                <div id="comprar" onclick="comprar()"><a href="#pagamento"><span>Comprar</span></a></div>
+                                <div id="cancelar" onclick="cancelar()"><span>Cancelar</span></div>
+                            </div>
+                        </div>
+                   </div>
+            </div>
+        </section>
+
+        <section id="pagamento">
+            <div id="container-pagamento">
+                <div class="titulo-pagamento">
+                    <h4>Escolha a forma de pagamento</h4>
+                </div>
+
+                <div id="forma-pagamento">
+                    <div id="pix">
+                        <div class="titulo-pagamento-cartao">
+                            <h4>Pix</h4>
+                            <h4><i class="fa-solid fa-caret-down"></i></h4>
+                        </div>
+                        <div id="conteudo-pix">
+                            <div id="img-qrcod">
+                                <img src="https://www.canalautismo.com.br/wp-content/uploads/2018/05/qrcode-RevistaAutismo.png" alt="">
+                            </div>
+
+                            <div id="codigo-copia-cola">
+                                <span>Código copia e cola</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="cartao">
+                        <div class="titulo-pagamento-cartao">
+                            <h4>Cartão</h4>
+                            <h4><i class="fa-solid fa-caret-down"></i></h4>
+                        </div>
+
+                        <div id="conteudo-cartao">
+                            <form action="/processar-pagamento" method="post">
+                                <div class="informacoes-cartao">
+                                    <label for="nome">Nome do Titular do Cartão:</label>
+                                    <input type="text" id="nome" name="nome" required>
+                                </div>
+
+                                <div class="informacoes-cartao">
+                                    <label for="numero-cartao">Número do Cartão:</label>
+                                    <input type="text" id="numero-cartao" name="numero-cartao" pattern="[0-9]{16}" required>
+                                </div>
+
+                                <div class="informacoes-cartao">
+                                    <label for="validade">Data de Validade:</label>
+                                    <input type="text" id="validade" name="validade" placeholder="MM/AA" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" required>
+                                </div>
+
+                                <div class="informacoes-cartao">
+                                    <label for="cvv">CVV:</label>
+                                    <input type="text" id="cvv" name="cvv" pattern="[0-9]{3,4}" required>
+                                </div>
+
+                                <div id="bnt-pagar-cartão">
+                                    <button type="submit">Pagar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

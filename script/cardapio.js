@@ -1,73 +1,104 @@
-
+// onload
 const listaCardapioBurguer = [
     {
-        nome: 'nome da comida',
-        preco: '00 R$',
+        nome: 'X-TUDO',
+        preco: 'R$ 10,00',
+        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+    },
+    {
+        nome: 'X-SALADA',
+        preco: 'R$ 10,00',
+        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+    },
+    {
+        nome: '3 TORRES',
+        preco: 'R$ 10,00',
+        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+    },
+    {
+        nome: 'VEGETARIANO',
+        preco: 'R$ 10,00',
+        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+    },
+    {
+        nome: 'DA CASA',
+        preco: 'R$ 10,00',
+        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+    },
+    {
+        nome: 'x-PODRÃO',
+        preco: 'R$ 10,00',
         imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
     },
     {
         nome: 'nome da comida',
-        preco: '00 R$',
+        preco: 'R$ 10,00',
         imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
     },
     {
         nome: 'nome da comida',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
-    },
-    {
-        nome: 'nome da comida',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
-    },
-    {
-        nome: 'nome da comida',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
-    },
-    {
-        nome: 'nome da comida',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
-    },
-    {
-        nome: 'nome da comida',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
-    },
-    {
-        nome: 'nome da comida',
-        preco: '00 R$',
+        preco: 'R$ 10,00',
         imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
     },
 ];
 
-for (const itensCardapio of listaCardapioBurguer) {
+
+window.onload = function() {
+    for (const itensCardapio of listaCardapioBurguer) {
    
-    const cardapio  =  
+        const cardapio  =  
+        
+       `<div class="cardCardapio">
+            <div class="img-div"><img class="imgCardCardapio" src="${itensCardapio.imagem}" alt=""></div>
+               
+            <div class="infosCardCardapio">
+                <span>${itensCardapio.nome}</span>
+                <span>${itensCardapio.preco}</span>
+            </div>
+               
+            <div class="bntComprar">
+                <span>adicionar ao carrinho</span>
+            </div>
+        </div>`;
+     
+        document.querySelector("#menuCardapio").innerHTML += cardapio;
+    }
+  };
+
+
+// ao lcicar no botao burguer
+
+document.getElementById("hamburguer").addEventListener("click", () => {
+    const cardCardapio = document.querySelectorAll(".cardCardapio");
+    cardCardapio.forEach((cards) => {cards.remove();});
+   
+    for (const itensCardapio of listaCardapioBurguer) {
+   
+        const cardapio  =  
+        
+       `<div class="cardCardapio">
+            <div class="img-div"><img class="imgCardCardapio" src="${itensCardapio.imagem}" alt=""></div>
+               
+            <div class="infosCardCardapio">
+                <span>${itensCardapio.nome}</span>
+                <span>${itensCardapio.preco}</span>
+            </div>
+               
+            <div class="bntComprar">
+                <span>adicionar ao carrinho</span>
+            </div>
+        </div>`;
+     
+        document.querySelector("#menuCardapio").innerHTML += cardapio;
     
-   `<div class="cardCardapio">
-        <img class="imgCardCardapio" src="${itensCardapio.imagem}" alt="">
-           
-        <div class="infosCardCardapio">
-            <h3>${itensCardapio.nome}</h3>
-            <h4>${itensCardapio.preco}</h4>
-        </div>
-           
-        <div class="bntComprar">
-            <p>adicionar ao carrinho</p>
-        </div>
-    </div>`;
- 
-    document.querySelector(".menuCardapio").innerHTML += cardapio;
-}
- 
+    };
+});
 
 //cardapio salgados
 const listaCardapioSalgados = [
     {
         nome: 'nome do salgado',
-        preco: '00 R$',
+        preco: 'R$ 10,00',
         imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
     },
     {
@@ -96,19 +127,19 @@ document.getElementById('salgados').addEventListener('click', () => {
         const cardapioSalgado  =  
     
         `<div class="cardCardapio">
-             <img class="imgCardCardapio" src="${itensCardapio.imagem}" alt="">
+             <div class="img-div"><img class="imgCardCardapio" src="${itensCardapio.imagem}" alt=""></div>
                 
              <div class="infosCardCardapio">
-                <h3>${itensCardapio.nome}</h3>
-                <h4>${itensCardapio.preco}</h4>
+                <span>${itensCardapio.nome}</span>
+                <span>${itensCardapio.preco}</span>
              </div>
                 
              <div class="bntComprar">
-                <p>adicionar ao carrinho</p>
+                <span>adicionar ao carrinho</span>
              </div>
         </div>`;
 
-        document.querySelector(".menuCardapio").innerHTML += cardapioSalgado;
+        document.querySelector("#menuCardapio").innerHTML += cardapioSalgado;
     };
 });
 
@@ -146,19 +177,19 @@ document.getElementById('bebidas').addEventListener('click', () => {
         const cardapioBebidas  =  
     
         `<div class="cardCardapio">
-             <img class="imgCardCardapio" src="${itensCardapio.imagem}" alt="">
+             <div class="img-div"><img class="imgCardCardapio" src="${itensCardapio.imagem}" alt=""></div>
                 
              <div class="infosCardCardapio">
-                <h3>${itensCardapio.nome}</h3>
-                <h4>${itensCardapio.preco}</h4>
+                <span>${itensCardapio.nome}</span>
+                <span>${itensCardapio.preco}</span>
              </div>
                 
              <div class="bntComprar">
-                <p>adicionar ao carrinho</p>
+                <span>adicionar ao carrinho</span>
              </div>
         </div>`;
 
-        document.querySelector(".menuCardapio").innerHTML += cardapioBebidas;
+        document.querySelector("#menuCardapio").innerHTML += cardapioBebidas;
     };
 });
 
@@ -196,18 +227,21 @@ document.getElementById('sobremesas').addEventListener('click', () => {
         const cardapioSobremesas  =  
     
         `<div class="cardCardapio">
-             <img class="imgCardCardapio" src="${itensCardapio.imagem}" alt="">
+             <div class="img-div"><img class="imgCardCardapio" src="${itensCardapio.imagem}" alt=""></div>
+                
                 
              <div class="infosCardCardapio">
-                <h3>${itensCardapio.nome}</h3>
-                <h4>${itensCardapio.preco}</h4>
+                <span>${itensCardapio.nome}</span>
+                <span>${itensCardapio.preco}</span>
              </div>
                 
              <div class="bntComprar">
-                <p>adicionar ao carrinho</p>
+                <span>adicionar ao carrinho</span>
              </div>
         </div>`;
 
-        document.querySelector(".menuCardapio").innerHTML += cardapioSobremesas;
+        document.querySelector("#menuCardapio").innerHTML += cardapioSobremesas;
     };
 });
+
+

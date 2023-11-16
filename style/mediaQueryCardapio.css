@@ -1,25 +1,20 @@
-@media only screen and (min-width: 350px) {
-    .menuCardapio {
-        grid-template-columns: repeat(2, 1fr);
+@media only screen and (min-width: 550px) {
+    #menuCardapio {
+        grid-template-columns: auto auto;
         gap: 15px;
     }
 }
 
-@media only screen and (min-width: 550px) {
-    .menuCardapio {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media only screen and (min-width: 750px) {
-    .menuCardapio {
-        grid-template-columns: repeat(4, 1fr);
+    #menuCardapio {
+        grid-template-columns: auto auto;
     }
 }
 
-@media only screen and (min-width: 820px) {
-    .menuCardapio {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 3rem;
+
+@media only screen and (min-width: 920px) {
+    #menuCardapio {
+        grid-template-columns: auto auto auto;
+        gap: 30px;
     }
 }

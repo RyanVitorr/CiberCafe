@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
 
@@ -6,12 +7,24 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: 'Black Ops One';
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
     --azul-Neon: #51fff9;
     --rosa-Neon: #ff7af1;
     --branco: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(9, 9, 17);
+    gap: 25px;
 }
 
 #bannerCardapio {
@@ -53,14 +66,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 99%;
     max-width: 900px;
     height: 35px;
     position: sticky;
     top: 0;
     border: 1px solid var(--rosa-Neon);
     box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
     background-color: white;
+    pad: 0 10px;
     
 }
 
@@ -69,7 +84,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    
     height: 100%;
 }
 
@@ -87,54 +101,242 @@
     height: 100%;
 }
 
-#listCardapio > ul > li {color: black;}
+#listCardapio > ul > li {color: black; font-size: 12.5px;}
 
 #containerCardapio {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    padding: 10px;
+    width: 100%;
+    max-width: 900px;
+    padding: 10px 0;
 }
 
-.menuCardapio {
+#menuCardapio {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: auto;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    max-width: 900px;
-    gap: 20px;
-    height: 100%;
+    width: 100%;
+    padding: 10px;
+    gap: 25px;
 }
 
 .cardCardapio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 160px;
+    justify-content: center;
+    width: 100%;
+    max-width: 270px;
+    gap: 20px;
+    padding: 10px 0;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
 }
 
-.imgCardCardapio { width: 100%;}
+.img-div {
+    width: 90%;
+    height: 50%;
+}
+
+.img-div > img {width: 100%;}
 
 .infosCardCardapio {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.infosCardCardapio > span {
+    color: white;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    border-radius: 10px;
+    padding: 3px 8px;
 }
 
 .bntComprar {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 200px;
     height: 30px;
-    background-color: white;
-    border-radius: 10px;
+    padding: 3px 8px;
     border: 1px solid var(--azul-Neon);
     box-shadow: 0 0 10px var(--azul-Neon);
+    border-radius: 10px;
     cursor: pointer;
 }
 
-.bntComprar > p {color: black;}
+.bntComprar > span {color: white;}
+
+/* carrinho */
+
+#comprar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+#container-comprar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 900px;
+    gap: 25px;
+    border: 1px solid var(--azul-Neon);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--azul-Neon);
+    background: 
+    linear-gradient(rgba(42, 64, 73, 0.795), rgba(42, 64, 73, 0.795)),
+    url(../img/backgroundCarrinho.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+/* carrinho */
+
+#carrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    height: 50vh;
+    width: 100%;
+    padding: 25px 0 10px 0;
+}
+
+#titulo-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+
+}
+#conteudo-titulo-carrinho > h4 {color: white; margin: 0;}
+
+#item-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#conteudo-item-carrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.card-item-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+}
+
+.img-item-carrinho {
+    display: flex;
+    width: 140px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.img-item-carrinho > img {width: 100%;}
+
+.infos-item-carrinho {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    padding: 8px;
+    text-align: center;
+}
+
+.nome-item-carrinho, .bnt-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.div-preco-mesa > span {
+    font-size: 15px;
+}
+
+.bnt-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    width: 100%;
+}
+
+.bnt-pri {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.bnt-pri > input {
+    width: 40px;
+    height: 25px;
+}
+
+.bnt-item-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.numero-hors-item-carrinho > p {color: black;}
+
+.bnt-seg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.bnt-excluir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* finalizar compra */
+
