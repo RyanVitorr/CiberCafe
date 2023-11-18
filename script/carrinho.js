@@ -305,10 +305,6 @@ function atualizarTotal() {
     pegarValorAluguel()
 }
 
-// mudar valor total no carrinho
-
-
-
 // ao clicar no botão de excluir item do carrinho --------------------------------------
 function excluirItemCarrinho(event) {
     event.target.parentElement.parentElement.parentElement.parentElement.remove();

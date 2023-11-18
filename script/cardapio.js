@@ -49,21 +49,23 @@ window.onload = function() {
         const cardapio  =  
         
        `<div class="cardCardapio">
-            <div class="img-div"><img class="imgCardCardapio" src="${itensCardapio.imagem}" alt=""></div>
+            <div class="img-div">
+                <img class="imgCardCardapio" src="${itensCardapio.imagem}" alt="">
+            </div>
                
             <div class="infosCardCardapio">
-                <span>${itensCardapio.nome}</span>
-                <span>${itensCardapio.preco}</span>
+                <span class="nome-produto">${itensCardapio.nome}</span>
+                <span class="preco-produto">${itensCardapio.preco}</span>
             </div>
                
-            <div class="bntComprar">
-                <span>adicionar ao carrinho</span>
-            </div>
+            <button type="button" class="bntComprar" onclick="addAoCarrinho(event)">
+                adicionar ao carrinho
+            </button>
         </div>`;
      
         document.querySelector("#menuCardapio").innerHTML += cardapio;
     }
-  };
+};
 
 
 // ao lcicar no botao burguer
@@ -84,9 +86,9 @@ document.getElementById("hamburguer").addEventListener("click", () => {
                 <span>${itensCardapio.preco}</span>
             </div>
                
-            <div class="bntComprar">
-                <span>adicionar ao carrinho</span>
-            </div>
+            <button type="button" class="bntComprar" onclick="addAoCarrinho(event)">
+                adicionar ao carrinho
+            </button>
         </div>`;
      
         document.querySelector("#menuCardapio").innerHTML += cardapio;
@@ -127,16 +129,16 @@ document.getElementById('salgados').addEventListener('click', () => {
         const cardapioSalgado  =  
     
         `<div class="cardCardapio">
-             <div class="img-div"><img class="imgCardCardapio" src="${itensCardapio.imagem}" alt=""></div>
+            <div class="img-div"><img class="imgCardCardapio" src="${itensCardapio.imagem}" alt=""></div>
                 
-             <div class="infosCardCardapio">
+            <div class="infosCardCardapio">
                 <span>${itensCardapio.nome}</span>
                 <span>${itensCardapio.preco}</span>
-             </div>
+            </div>
                 
-             <div class="bntComprar">
-                <span>adicionar ao carrinho</span>
-             </div>
+            <button type="button" class="bntComprar" onclick="addAoCarrinho(event)">
+                adicionar ao carrinho
+            </button>
         </div>`;
 
         document.querySelector("#menuCardapio").innerHTML += cardapioSalgado;
@@ -177,16 +179,16 @@ document.getElementById('bebidas').addEventListener('click', () => {
         const cardapioBebidas  =  
     
         `<div class="cardCardapio">
-             <div class="img-div"><img class="imgCardCardapio" src="${itensCardapio.imagem}" alt=""></div>
+            <div class="img-div"><img class="imgCardCardapio" src="${itensCardapio.imagem}" alt=""></div>
                 
-             <div class="infosCardCardapio">
+            <div class="infosCardCardapio">
                 <span>${itensCardapio.nome}</span>
                 <span>${itensCardapio.preco}</span>
-             </div>
+            </div>
                 
-             <div class="bntComprar">
-                <span>adicionar ao carrinho</span>
-             </div>
+            <button type="button" class="bntComprar" onclick="addAoCarrinho(event)">
+                adicionar ao carrinho
+            </button>
         </div>`;
 
         document.querySelector("#menuCardapio").innerHTML += cardapioBebidas;
@@ -227,17 +229,17 @@ document.getElementById('sobremesas').addEventListener('click', () => {
         const cardapioSobremesas  =  
     
         `<div class="cardCardapio">
-             <div class="img-div"><img class="imgCardCardapio" src="${itensCardapio.imagem}" alt=""></div>
+            <div class="img-div"><img class="imgCardCardapio" src="${itensCardapio.imagem}" alt=""></div>
                 
                 
-             <div class="infosCardCardapio">
+            <div class="infosCardCardapio">
                 <span>${itensCardapio.nome}</span>
                 <span>${itensCardapio.preco}</span>
-             </div>
+            </div>
                 
-             <div class="bntComprar">
-                <span>adicionar ao carrinho</span>
-             </div>
+            <button type="button" class="bntComprar" onclick="addAoCarrinho(event)">
+                adicionar ao carrinho
+            </button>
         </div>`;
 
         document.querySelector("#menuCardapio").innerHTML += cardapioSobremesas;

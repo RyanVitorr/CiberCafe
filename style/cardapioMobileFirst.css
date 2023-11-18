@@ -18,12 +18,13 @@ p {
     --azul-Neon: #51fff9;
     --rosa-Neon: #ff7af1;
     --branco: white;
+    --fundo: rgb(9, 9, 17);
 }
 
 main {
     display: flex;
     flex-direction: column;
-    background-color: rgb(9, 9, 17);
+    background-color: var(--fundo);
     gap: 25px;
 }
 
@@ -164,15 +165,15 @@ main {
     align-items: center;
     justify-content: center;
     width: 200px;
-    height: 30px;
+    height: 40px;
     padding: 3px 8px;
     border: 1px solid var(--azul-Neon);
     box-shadow: 0 0 10px var(--azul-Neon);
     border-radius: 10px;
+    background-color: var(--fundo);
+    color: var(--branco);
     cursor: pointer;
 }
-
-.bntComprar > span {color: white;}
 
 /* carrinho */
 
@@ -212,7 +213,7 @@ main {
     align-items: center;
     justify-content: space-between;
     gap: 25px;
-    height: 50vh;
+   
     width: 100%;
     padding: 25px 0 10px 0;
 }
@@ -340,3 +341,54 @@ main {
 
 /* finalizar compra */
 
+#finalizar-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+
+}
+
+#preco-compra {
+    display: flex;
+    width: 100%;
+} 
+
+#conteudo-preco-compra {
+    display: flex;
+    width: 100%;
+}
+
+.div-conteudo-preco-compra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    text-align: center;
+
+}
+
+.div-conteudo-preco-compra > span {color: white;}
+
+#conteudo-finalizar-compra {
+    display: flex;
+    width: 100%;
+}
+
+#conteudo-finalizar-compra > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    text-align: center;
+    width: 100%;
+}
+
+#conteudo-finalizar-compra > div > span {color: white;}
+#comprar > a {color: white; text-decoration: none;}
