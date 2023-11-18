@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="../style/cardapioMobileFirst.css">
     <link rel="stylesheet" href="../style/mediaQueryCardapio.css">
     <title>CyberCafé</title>
@@ -71,13 +72,13 @@
 
         <section id="pagamento">
             <div id="container-pagamento">
-                <div class="titulo-pagamento">
+                <div id="titulo-pagamento">
                     <h4>Escolha a forma de pagamento</h4>
                 </div>
 
                 <div id="forma-pagamento">
                     <div id="pix">
-                        <div class="titulo-pagamento-cartao">
+                        <div class="titulo-pagamento-pix-cartao">
                             <h4>Pix</h4>
                             <h4><i class="fa-solid fa-caret-down"></i></h4>
                         </div>
@@ -86,14 +87,14 @@
                                 <img src="https://www.canalautismo.com.br/wp-content/uploads/2018/05/qrcode-RevistaAutismo.png" alt="">
                             </div>
 
-                            <div id="codigo-copia-cola">
-                                <span>Código copia e cola</span>
-                            </div>
+                            <button id="codigo-copia-cola">
+                                Código copia e cola
+                            </button >
                         </div>
                     </div>
 
                     <div id="cartao">
-                        <div class="titulo-pagamento-cartao">
+                        <div class="titulo-pagamento-pix-cartao">
                             <h4>Cartão</h4>
                             <h4><i class="fa-solid fa-caret-down"></i></h4>
                         </div>
@@ -120,9 +121,9 @@
                                     <input type="text" id="cvv" name="cvv" pattern="[0-9]{3,4}" required>
                                 </div>
 
-                                <div id="bnt-pagar-cartão">
-                                    <button type="submit">Pagar</button>
-                                </div>
+                                
+                                <button id="botao-pagar-cartao" type="submit">Pagar</button>
+                                
                             </form>
                         </div>
                     </div>

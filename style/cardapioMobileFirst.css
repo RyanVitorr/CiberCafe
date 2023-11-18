@@ -372,7 +372,7 @@ main {
 
 }
 
-.div-conteudo-preco-compra > span {color: white;}
+.div-conteudo-preco-compra > span, P {color: white;}
 
 #conteudo-finalizar-compra {
     display: flex;
@@ -392,3 +392,179 @@ main {
 
 #conteudo-finalizar-compra > div > span {color: white;}
 #comprar > a {color: white; text-decoration: none;}
+
+/* pagamento*/
+
+#pagamento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+#container-pagamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 900px;
+    padding: 10px;
+    gap: 25px;
+    border: 1px solid var(--azul-Neon);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--azul-Neon);
+    background: 
+    linear-gradient(rgba(42, 64, 73, 0.795), rgba(42, 64, 73, 0.795)),
+    url(../img/backgroundCarrinho.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+#titulo-pagamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+    margin-top: 25px;
+
+}
+
+#titulo-pagamento > h4 {color: white; margin: 0; text-align: center;}
+
+#forma-pagamento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    width: 90%;
+    padding: 10px;
+}
+
+/* pix */
+
+#pix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    gap: 25px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+}
+
+.titulo-pagamento-pix-cartao {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    gap: 10px;
+}
+
+.titulo-pagamento-pix-cartao h4, i {color: white; margin: 0;}
+
+#conteudo-pix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    gap: 25px;
+}
+
+#img-qrcod {
+    display: flex;
+    width: 90%;
+    max-width: 300PX;
+    height: 35vh;
+}
+
+#img-qrcod  > img {width: 100%;}
+
+#codigo-copia-cola {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 30px;
+    max-width: 200px;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    border-radius: 10px;
+}
+
+/* cartão */
+
+#cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    gap: 25px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+}
+
+#conteudo-cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    gap: 25px;
+}
+
+#conteudo-cartao > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 400PX;
+    gap: 20px;
+}
+
+.informacoes-cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.informacoes-cartao > label {
+    text-align: center;
+}
+
+.informacoes-cartao > input {
+    width: 100%;
+    height: 20px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+}
+
+#cvv {width: 50px;}
+#validade {width: 70px;}
+
+#botao-pagar-cartao {
+    width: 150px;
+    height: 25px;
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+}
