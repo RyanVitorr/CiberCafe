@@ -1,4 +1,4 @@
-
+const carrinho = document.querySelector("#comprar");
 // adicionar produto ao carrinho
 
 function addAoCarrinho(event) {
@@ -7,8 +7,7 @@ function addAoCarrinho(event) {
     const imgProduto = infoProduto.getElementsByClassName("imgCardCardapio")[0].src;
     const nomeProduto = infoProduto.getElementsByClassName("nome-produto")[0].innerText;
     const precoProduto = infoProduto.getElementsByClassName("preco-produto")[0].innerText;
-    console.log(infoProduto);
-    
+
 
     const novoCardItemCarrinho = `<div class="card-item-carrinho">  
                                     <div class="img-item-carrinho">
@@ -40,6 +39,14 @@ function addAoCarrinho(event) {
 
 
     document.querySelector("#conteudo-item-carrinho").innerHTML += novoCardItemCarrinho;
+    
+    if (carrinho.style.display == "") {
+        carrinho.style.display = "flex"
+    }
+
+    valorTotal = 0;
+    pegarValorAluguel()
+    atualizarTotal()
 ;};
 
 
@@ -88,20 +95,34 @@ function cancelar() {
     const mesa = document.querySelectorAll(".mesas")
     mesa.forEach((mesa) => {mesa.remove();});
 
-    if (sectionAluguel.style.display == "flex") {
-        sectionAluguel.style.display = "";
+    if (carrinho.style.display == "flex") {
+        carrinho.style.display = "";
     }
 };
 
 // bnt comprar ------------------------------------------------------------------------
 const bntComprar = document.querySelector("#comprar");
 const mostrarPagamento = document.querySelector("#pagamento");
+const localizacao = document.querySelector("#localizacao");
 
 
 function comprar() {
     if (valorTotal == "0,00") {
         alert("Seu carrinho está vazio!")
     } else {
-        mostrarPagamento.classList.toggle("ativo");
+        localizacao.classList.toggle("ativo");
     }
 }
+
+// ao clicar em continuar 
+const pagamento = document.querySelector("#pagamento");
+const continuarCompra = document.querySelector("#bntContinuarCompra");
+continuarCompra.addEventListener("click", () => {
+    pagamento.classList.toggle("ativar");
+});
+
+// clicar me pagar (cartao)
+const pagar = document.querySelector("#botao-pagar-cartao");
+pagar.addEventListener("click", () => {
+    alert("Pagamento realizado com sucesso!!!");
+});

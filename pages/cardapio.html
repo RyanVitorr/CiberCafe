@@ -62,11 +62,58 @@
                                 </div>
                             </div>
                             <div id="conteudo-finalizar-compra">
-                                <div id="comprar" onclick="comprar()"><a href="#pagamento"><span>Comprar</span></a></div>
+                                <div id="comprar" onclick="comprar()"><a href="#localizacao"><span>Comprar</span></a></div>
                                 <div id="cancelar" onclick="cancelar()"><span>Cancelar</span></div>
                             </div>
                         </div>
                    </div>
+            </div>
+        </section>
+
+
+        <section id="localizacao">
+            <div id="container-localizacao">
+                <form method="get" action="." id="formEndereco">
+                    <div class="linha">
+                        <label for="nomeCompleto">Nome Completo:</label>
+                        <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+                    </div>
+
+                    <div class="linha">
+                        <label for="telefone">Número de Celular:</label>
+                        <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10}" placeholder="Apenas números, 10 dígitos" required>
+                    </div>
+
+                    <div class="linha">
+                        <label for="cep">Cep:</label>
+                        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                            onblur="pesquisacep(this.value);" required />
+                    </div>
+        
+                    <div class="linha">
+                        <label for="rua">Rua:</label>
+                        <input name="rua" type="text" id="rua" size="60" />
+                        <label for="numeroCasa">Número da casa</label>
+                        <input type="text" name="numeroCasa" id="numeroCasa" placeholder="Numero da casa">
+                    </div>
+                   
+                    <div class="linha">
+                        <label for="bairro">Bairro:</label>
+                        <input name="bairro" type="text" id="bairro" size="40" />
+                    </div>
+                   
+                    <div class="linha">
+                        <label for="cidade" class="label_1">Cidade:</label>
+                        <input name="cidade" type="text" id="cidade" size="40" />
+                    </div>
+                   
+                    <div class="linha">
+                        <label for="uf">Estado:</label>
+                        <input name="uf" type="text" id="uf" size="2" />
+                    </div>
+
+                    <div id="bntContinuarCompra"><span>Continuar</span></div>
+                </form>
             </div>
         </section>
 
@@ -134,5 +181,6 @@
 
     <script src="../script/cardapio.js"></script>
     <script src="../script/carrinhoCardapio.js"></script>
+    <script src="../script/pegarCep.js"></script>
 </body>
 </html>

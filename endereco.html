@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Endereço</title>
+</head>
+<body>
+
+    <h1>Formulário de Endereço</h1>
+
+    <form action="#" method="post">
+        <label for="cep">NOME COMPLETO:</label>
+        <input type="text" id="nomeCompleto" name="cep" pattern="\d{5}-\d{3}" placeholder="NOME COMPLETO" required>
+        
+        <br>
+
+        <label for="telefone">Número de Celular:</label>
+        <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10}" placeholder="Apenas números, 10 dígitos" required>
+
+        <br>
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="12345-678" required>
+        
+        <br>
+
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" required>
+
+        <br>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required>
+
+        <br>
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" required>
+
+        <br>
+
+        <label for="rua">Nome da Rua:</label>
+        <input type="text" id="rua" name="rua" required>
+
+        <br>
+
+        <label for="numero">Número da Casa:</label>
+        <input type="text" id="numero" name="numero" required>
+
+        <br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>
