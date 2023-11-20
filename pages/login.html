@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/mobileFirstLogin.css">
+    <title>Login</title>
+    
+</head>
+<body>
+
+    <main>
+        <div class="container" id="loginForm">
+            <h2>Login</h2>
+            <form>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="button" onclick="login()">Entrar</button>
+            </form>
+            <p>Não tem uma conta? <a href="#" onclick="showRegistrationForm()">Cadastre-se aqui</a>.</p>
+        </div>
+        <div class="container" id="registrationForm" style="display: none;">
+            <h2>Cadastro</h2>
+            <form>
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="emailRegister" name="email" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="passwordRegister" name="password" required>
+                <button type="button" onclick="register()">Cadastrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="#" onclick="showLoginForm()">Faça login aqui</a>.</p>
+        </div>
+    </main>
+
+    <script>
+        function showRegistrationForm() {
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("registrationForm").style.display = "block";
+        }
+
+        function showLoginForm() {
+            document.getElementById("registrationForm").style.display = "none";
+            document.getElementById("loginForm").style.display = "block";
+        }
+
+        function login() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Aqui você pode adicionar lógica para verificar as credenciais no backend.
+            // Por enquanto, apenas exibiremos os dados no console.
+
+            console.log("E-mail: " + email);
+            console.log("Senha: " + password);
+        }
+
+        function register() {
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("emailRegister").value;
+            var password = document.getElementById("passwordRegister").value;
+
+            // Aqui você pode adicionar lógica para processar o cadastro no backend.
+            // Por enquanto, apenas exibiremos os dados no console.
+
+            console.log("Nome de Usuário: " + username);
+            console.log("E-mail: " + email);
+            console.log("Senha: " + password);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+@media only screen and (min-width: 700px) {
+    #navbarNav {
+        display: flex; 
+        width: 70%;
+        height: 50%;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.644);
+        border: 1px solid var(--azul-Neon);
+        box-shadow: 0 0 10px var(--azul-Neon);
+        position: static;
+        top: 0;
+        left: 0;
+    }
+    #navbarNav > ul {flex-direction: row;}
+
+    #navbarNav > ul > li > a:hover {color: var(--azul-Neon);}
+
+    #menu-burguer {
+        display: none;
+    }
+}

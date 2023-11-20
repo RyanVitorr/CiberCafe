@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Black Ops One';
+    overflow: hidden;
+}
+
+:root {
+    --azul-Neon: #51fff9;
+    --rosa-Neon: #ff7af1;
+    --branco: white;
+    --fundo: rgb(9, 9, 17);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/neonbackgroundprincipal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #222222ce;
+    border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    gap: 25px;
+}
+
+.container > h2 {color: var(--rosa-Neon);}
+#loginForm > p > a{color: var(--azul-Neon);}
+
+#registrationForm >h2 {margin-bottom: 15px;}
+#registrationForm >p {margin-top: 15px;}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    box-sizing: border-box;
+    background-color: #33333349;
+    color: #fff;
+}
+
+label {color: var(--rosa-Neon);}
+
+button {
+    border-radius: 10px;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    width: 100%;
+    height: 40px;
+    color: black;  
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--rosa-Neon);
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+}

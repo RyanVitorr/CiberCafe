@@ -1,24 +1,127 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+
 * {
     padding: 0;
     margin: 0;
     list-style: none;
+    font-family: 'Black Ops One';
+    text-decoration: none;
 }
 
- /*header*/
+:root {
+    --azul-Neon: #51fff9;
+    --rosa-Neon: #ff7af1;
+    --branco: white;
+    --fundo: rgb(9, 9, 17);
+}
+
+/*header*/
 header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     background-color: #343A40;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
-header > nav {
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
     width: 100%;
-    max-width: 1350px;
+    max-width: 1500px;
+    padding: 5px;
+    position: relative;
 }
+
+#navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+}
+#navbar-img { width: 70px; height: 100%;}
+#navbar-img > img {width: 100%; height: 100%;}
+#navbar-container > p {color: var(--azul-Neon);}
+
+#navbarNav {
+    display: none; 
+    width: 90%;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    position: absolute;
+    top: 90px;  
+    left: 5%;
+}
+#navbarNav.mostrar {display: flex;}
+
+#navbarNav > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#navbarNav > ul > li  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#navbarNav > ul > li:nth-child(1){
+    border-bottom: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon); 
+}
+#navbarNav > ul > li:nth-child(2){
+    border-bottom: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon); 
+}
+#navbarNav > ul > li:nth-child(3){
+    border-bottom: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon); 
+}
+
+#navbarNav > ul > li > a {color: white;}
+#navbarNav > ul > li > a:hover {color: var(--azul-Neon);}
+
+
+
+#navbarNav.mostrar {display: block;}
+
+#menu-burguer {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.barra-menu-burguer {
+    display: block;
+    width: 25px;
+    height: 1px;
+    margin: 5px;
+    background-color: var(--azul-Neon);
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
+    border-radius: 10px;
+}
+
+
+/* main */
 
 main {
     display: flex;
@@ -34,7 +137,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: 700px;
     position: relative;
 }
@@ -51,17 +154,21 @@ main {
     align-items: center;
     justify-content: center;
     width: 95%;
+    max-width: 1500px;
     height: 70%;
     gap: 25px;
     background-color: rgba(0, 0, 0, 0.644);
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#conteudoBanner > h2, p {color: white; text-align: center; }
-#conteudoBanner > p {font-size: 18px;}
+#conteudoBanner > h2, p {color: var(--rosa-Neon); text-align: center; }
+#conteudoBanner > p {font-size: 18px; color: white; padding: 10px;}
 
 
 /* section cards*/
@@ -71,9 +178,10 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     gap: 5px;
     background-color: black;
+    
 }
 
 @media screen and (min-width: 1150px){
@@ -87,7 +195,7 @@ main {
     justify-content: center;
     width: 100%;
     height: 500px;
-    padding: 10px;
+    
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -106,10 +214,13 @@ main {
     padding: 10px;
     gap: 25px;
     background-color: rgba(0, 0, 0, 0.644);
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
 }
 
-.conteudoCards > h2, p {color: white; text-align: center;}
-.conteudoCards > p {font-size: 18px; padding: 0 30px;}
+.conteudoCards > h2 {color: var(--azul-Neon); text-align: center;}
+.conteudoCards > p { color: white; font-size: 18px; padding: 0 30px;}
 
 .bntVisita {
     display: flex;
@@ -117,8 +228,49 @@ main {
     justify-content: center;
     width: 130px;
     height: 30px;
-    background-color: rgba(13, 216, 216, 0.479);
+    background-color: var(--azul-Neon);
+    border-radius: 10px;
+    border: 1px solid var(--azul-Neon);
+    box-shadow: 0 0 10px var(--azul-Neon);
     border-radius: 10px;
 }
 
 .bntVisita > a {color: black; text-decoration: none;}
+
+/* lounge */
+
+#lounge {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+    padding: 20px 10px;
+    background-color: black;
+    background-image: url(../img/neonbackgroundprincipal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#lounge.mostrar {display: flex;}
+
+#conteudo-lounge {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    width: 100%;
+    max-width: 2000px;
+    height: 100%;
+    padding: 10px;
+    gap: 25px;
+    background-color: rgba(0, 0, 0, 0.897);
+    border: 1px solid var(--rosa-Neon);
+    box-shadow: 0 0 10px var(--rosa-Neon);
+    border-radius: 10px;
+}
+
+#conteudo-lounge > p {
+    text-align: center;
+    margin-top: 50px; 
+    width: 100%;
+}

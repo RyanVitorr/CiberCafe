@@ -3,31 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style/mobileFirst.css">
-    <title>Cyber café</title>
+    <link rel="stylesheet" href="style/mediaQuery.css">
+    <title>Neon Nexos</title>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-            <a class="navbar-brand" href="#" style="color: white;">
-                <img  class="img-fluid" src="img/logo-removebg-preview.png" alt="Logo" style="max-height: 150px;" id="logo">
-                CyberCafé
+        <nav id="navbar">
+            <a id="navbar-container" href="#header">
+                <div id="navbar-img"><img src="img/logo-removebg-preview.png" alt="Logo" style="max-height: 150px;" id="logo"></div>
+                <p>Neon Nexos</p>
             </a>
             
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Home</a>
+                        <a class="nav-link text-light" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Serviços</a>
+                        <a class="nav-link text-light" href="#containerCards">Serviços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Fale</a>
+                        <a class="nav-link text-light" href="pages/faleconos.html" target="_blank">Fale Conosco</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="pages/faleconos.html" target="_blank">Faça Login</a>
                     </li>
                 </ul>
+            </div>
+
+            <div id="menu-burguer">
+                <span class="barra-menu-burguer"></span>
+                <span class="barra-menu-burguer"></span>
+                <span class="barra-menu-burguer"></span>
             </div>
         </nav>
     </header>
@@ -69,12 +78,39 @@
                     <h2>Nosso Lounge</h2>
                     <p>Lounge brabo o resto é fraco</p>
 
-                    <div class="bntVisita">
-                        <a href="#">Visitar</a>
+                    <div class="bntVisita" id="saberMais">
+                        <a href="#lounge">Saber Mais!</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="lounge">
+            <div id="conteudo-lounge">
+                <p>
+                Bem-vindo ao Neon Haven, o lounge cibernético que transporta seus sentidos para um futuro distópico e futurista. Ao adentrar este refúgio de alta tecnologia, é impossível não se impressionar com a atmosfera pulsante que o envolve. O Neon Haven é muito mais do que um simples cybercafé; é uma experiência imersiva no estilo cyberpunk que cativa e inspira.
+                <br>
+                <br>
+                A estrutura do lounge é um tributo à estética distópica, com paredes de concreto exposto decoradas por grafites neon e luzes LED que piscam em tons vibrantes de azul e magenta. A iluminação, suficientemente baixa para criar uma atmosfera íntima, destaca os contornos dos clientes imersos em suas realidades virtuais. Cadeiras futuristas, revestidas de couro sintético com detalhes metálicos, proporcionam conforto ergonômico enquanto os usuários mergulham nas vastas paisagens digitais.
+                <br>
+                <br>
+                A qualidade do Neon Haven está intrinsecamente ligada à sua infraestrutura tecnológica de última geração. Computadores pessoais potentes, equipados com processadores holográficos e GPUs avançadas, oferecem uma experiência de jogo e navegação virtual sem precedentes. Os monitores curvos e holográficos proporcionam uma sensação envolvente, mergulhando os jogadores em mundos digitais repletos de detalhes deslumbrantes.
+                <br>
+                <br>
+                A música ambiente, uma mistura pulsante de sintetizadores eletrônicos e batidas futuristas, cria a trilha sonora perfeita para a jornada cibernética. As paredes são equipadas com painéis de realidade aumentada, que transformam o espaço ao redor em paisagens urbanas cyberpunk, adicionando uma camada extra de imersão ao ambiente.
+                <br>
+                <br>
+                Os serviços oferecidos no Neon Haven transcendem as expectativas com uma variedade de bebidas e lanches futuristas, desde cafés gelados revigorantes até smoothies energéticos. Um bar de realidade aumentada permite que os clientes personalizem suas bebidas e experimentem novos sabores digitais enquanto socializam com outros frequentadores do lounge.
+                <br>
+                <br>
+                A equipe do Neon Haven é composta por especialistas em realidade virtual e cibersegurança, garantindo que cada cliente tenha uma experiência segura e emocionante. Além disso, workshops regulares são oferecidos para iniciantes e entusiastas avançados, permitindo que todos explorem e aprimorem suas habilidades no vasto universo digital.
+                <br>
+                <br>
+                Em resumo, o Neon Haven não é apenas um cybercafé; é um refúgio para os amantes da tecnologia, uma fusão de arte, entretenimento e inovação que transporta seus frequentadores para um futuro cibernético fascinante. Este é o lugar onde o presente se encontra com o futuro, e a experiência é tão intensa quanto os neons que iluminam suas paredes.</p>
+            </div>
+        </section>
     </main>
+
+    <script src="script/main.js"></script>
 </body>
 </html>
