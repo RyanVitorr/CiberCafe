@@ -305,6 +305,7 @@ main {
     border: 1px solid var(--azul-Neon);
     box-shadow: 0 0 10px var(--azul-Neon);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 #bntInfos > button > a {color: black;}
@@ -387,7 +388,7 @@ main {
     width: 70%;
     height: 40px;
     border-radius: 10px;
-
+    cursor: pointer;
     background-color: var(--rosa-Neon);
     box-shadow: 0 0 10px var(--rosa-Neon);
 }
@@ -609,6 +610,7 @@ main {
     justify-content: space-between;
     background-color: white;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .bnt-pri > input {
@@ -635,6 +637,7 @@ main {
     justify-content: space-between;
     background-color: white;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .bnt-excluir {
@@ -657,6 +660,7 @@ main {
     justify-content: center;
     width: 100%;
     padding: 10px;
+    cursor: pointer;
 
 }
 
@@ -871,6 +875,7 @@ input {
     align-items: center;
     justify-content: center;
     width: 100%;
+    cursor: pointer;
 }
 
 #bnt-pagar-cartão > button { 
