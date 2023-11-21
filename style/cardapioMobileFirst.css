@@ -8,6 +8,7 @@
     padding: 0;
     list-style: none;
     font-family: 'Black Ops One';
+    text-decoration: none;
 }
 
 p {
@@ -86,6 +87,7 @@ main {
     justify-content: center;
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 
 .barraSeparaList {
@@ -100,9 +102,9 @@ main {
     justify-content: center;
     width: 100%;
     height: 100%;
+    color: black; 
+    font-size: 12.5px;
 }
-
-#listCardapio > ul > li {color: black; font-size: 12.5px;}
 
 #containerCardapio {
     display: flex;
@@ -128,8 +130,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 270px;
+    width: 260px;
+    height: 253px;
     gap: 20px;
     padding: 10px 0;
     border: 1px solid var(--rosa-Neon);
@@ -138,11 +140,11 @@ main {
 }
 
 .img-div {
-    width: 90%;
+    width: 70%;
     height: 50%;
 }
 
-.img-div > img {width: 100%;}
+.img-div > img {width: 100%; height: 100%;}
 
 .infosCardCardapio {
     display: flex;
@@ -243,7 +245,6 @@ main {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 10px;
 }
 
 .card-item-carrinho {
@@ -257,9 +258,10 @@ main {
 
 .img-item-carrinho {
     display: flex;
-    width: 140px;
-    height: 120px;
+    width: 200px;
+    height: 140px;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .img-item-carrinho > img {width: 100%;}
@@ -348,6 +350,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 600px;
     padding: 10px;
 
 }
@@ -389,6 +392,7 @@ main {
     box-shadow: 0 0 10px var(--azul-Neon);
     text-align: center;
     width: 100%;
+    cursor: pointer;
 }
 
 #conteudo-finalizar-compra > div > span {color: white;}
@@ -463,7 +467,10 @@ main {
     box-shadow: 0 0 10px var(--azul-Neon);
     width: 200px;
     height: 25px;
+    cursor: pointer;
 }
+
+#bntContinuarCompra > a {color: white;}
 
 /* pagamento*/
 
@@ -573,6 +580,7 @@ main {
     border: 1px solid var(--azul-Neon);
     box-shadow: 0 0 10px var(--azul-Neon);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 /* cartão */
@@ -640,4 +648,5 @@ main {
     border: 1px solid var(--azul-Neon);
     box-shadow: 0 0 10px var(--azul-Neon);
     border-radius: 10px;
+    cursor: pointer;
 }

@@ -2,43 +2,33 @@
 const listaCardapioBurguer = [
     {
         nome: 'X-TUDO',
-        preco: 'R$ 10,00',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        preco: 'R$ 7,50',
+        imagem:'../img/cardapio/X-tudo.jpg'
     },
     {
         nome: 'X-SALADA',
-        preco: 'R$ 10,00',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        preco: 'R$ 8,00',
+        imagem:'../img/cardapio/X-salada.avif'
     },
     {
         nome: '3 TORRES',
-        preco: 'R$ 10,00',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        preco: 'R$ 15,00',
+        imagem:'../img/cardapio/3 torres.jpg'
     },
     {
         nome: 'VEGETARIANO',
         preco: 'R$ 10,00',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        imagem:'../img/cardapio/vegetariano.jpg'
     },
     {
         nome: 'DA CASA',
-        preco: 'R$ 10,00',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        preco: 'R$ 7,00',
+        imagem:'../img/cardapio/da casa.jpg'
     },
     {
         nome: 'x-PODRÃO',
-        preco: 'R$ 10,00',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
-    },
-    {
-        nome: 'nome da comida',
-        preco: 'R$ 10,00',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
-    },
-    {
-        nome: 'nome da comida',
-        preco: 'R$ 10,00',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        preco: 'R$ 12,50',
+        imagem:'../img/cardapio/podrao.jpg'
     },
 ];
 
@@ -99,24 +89,24 @@ document.getElementById("hamburguer").addEventListener("click", () => {
 //cardapio salgados
 const listaCardapioSalgados = [
     {
-        nome: 'nome do salgado',
-        preco: 'R$ 10,00',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        nome: 'Coxinha',
+        preco: 'R$ 3,50',
+        imagem:'../img/cardapio/coxinha.jpg'
     },
     {
-        nome: 'nome do salgado',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        nome: 'Pão Pizza',
+        preco: 'R$ 5,00',
+        imagem:'../img/cardapio/paopizza.jpg'
     },
     {
-        nome: 'nome do salgado',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        nome: 'Pastel',
+        preco: 'R$ 4,00',
+        imagem:'../img/cardapio/patelForno.jpg'
     },
     {
-        nome: 'nome do salgado',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        nome: 'Enroladinho',
+        preco: 'R$ 2,50',
+        imagem:'../img/cardapio/enroladinho.png'
     }
 ];
 
@@ -149,24 +139,24 @@ document.getElementById('salgados').addEventListener('click', () => {
 //cardapio bebidas
 const listaCardapioBebidas = [
     {
-        nome: 'nome da bebida ',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        nome: 'Coca-Cola',
+        preco: 'R$ 7,50',
+        imagem:'../img/cardapio/coca cola.png'
     },
     {
-        nome: 'nome da bebida',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        nome: 'Pepsi',
+        preco: 'R$ 4,50',
+        imagem:'../img/cardapio/pepsi.webp'
     },
     {
-        nome: 'nome da bebida',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        nome: 'Mimosa',
+        preco: 'R$ 3,50',
+        imagem:'../img/cardapio/suco de laranja.avif'
     },
     {
-        nome: 'nome da bebida',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        nome: 'Corote',
+        preco: 'R$ 5,00',
+        imagem:'../img/cardapio/corote.jpeg'
     }
 ];
 
@@ -199,24 +189,24 @@ document.getElementById('bebidas').addEventListener('click', () => {
 // cardapio sobremesas
 const listaCardapioSobremesas = [
     {
-        nome: 'nome da sobremesa ',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        nome: 'Pavê',
+        preco: 'R$ 7,50',
+        imagem:'../img/cardapio/pave.jpg'
     },
     {
-        nome: 'nome da sobremesa',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        nome: 'Torta de limão',
+        preco: 'R$ 5,50',
+        imagem:'../img/cardapio/tortaLimao.jpg'
     },
     {
-        nome: 'nome da sobremesa',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        nome: 'Sorvetes',
+        preco: 'R$ 1,50',
+        imagem:'../img/cardapio/sorvete.jpg'
     },
     {
-        nome: 'nome da sobremesa',
-        preco: '00 R$',
-        imagem:'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75'
+        nome: 'Pudim',
+        preco: 'R$ 4,00',
+        imagem:'../img/cardapio/pudim.jpg'
     }
 ];
 
