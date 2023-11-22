@@ -9,6 +9,7 @@
     list-style: none;
     font-family: 'Black Ops One';
     text-decoration: none;
+    overflow-x: hidden;
 }
 
 p {
@@ -56,6 +57,8 @@ main {
     font-family: 'Black Ops One';
 }
 
+#conteudoBannerCardapio > p {text-align: center;}
+
 #cardapio {
     display: flex;
     flex-direction: column;
@@ -91,12 +94,6 @@ main {
     cursor: pointer;
 }
 
-.barraSeparaList {
-    width: 1px;
-    height: 100%;
-    background-color: var(--rosa-Neon);
-}
-
 #listCardapio > ul > li {
     display: flex;
     align-items: center;
@@ -106,6 +103,9 @@ main {
     color: black; 
     font-size: 12.5px;
 }
+#listCardapio > ul > li:nth-child(1){border-right: 1px solid var(--rosa-Neon);}
+#listCardapio > ul > li:nth-child(2){border-right: 1px solid var(--rosa-Neon);}
+#listCardapio > ul > li:nth-child(3){border-right: 1px solid var(--rosa-Neon);}
 
 #containerCardapio {
     display: flex;
@@ -185,6 +185,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 10px 0;
 }
 
 #container-comprar {
@@ -216,7 +217,6 @@ main {
     align-items: center;
     justify-content: space-between;
     gap: 25px;
-   
     width: 100%;
     padding: 25px 0 10px 0;
 }
@@ -259,8 +259,8 @@ main {
 
 .img-item-carrinho {
     display: flex;
-    width: 200px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -382,6 +382,7 @@ main {
 #conteudo-finalizar-compra {
     display: flex;
     width: 100%;
+    height: 30px;
 }
 
 #conteudo-finalizar-compra > div {
