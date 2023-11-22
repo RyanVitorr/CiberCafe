@@ -3,7 +3,7 @@
     #conteudoIcones {
         flex-direction: row;
         height: 350px;
-         
+        gap: 25px;
     }
 
     #containerInfos {gap: 20px;}
