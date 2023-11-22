@@ -64,3 +64,20 @@ function pesquisacep(valor) {
     limpa_formulário_cep();
     }
 };
+
+
+const pagamento = document.querySelector("#pagamento");
+const continuarCompra = document.querySelector("#bntContinuarCompra");
+continuarCompra.addEventListener("click", () => {
+    let rua = document.getElementById('rua').value;
+    let bairro = document.getElementById('bairro').value;
+    let cidade = document.getElementById('cidade').value;
+    let uf = document.getElementById('uf').value;
+   
+   if (rua == "" || bairro == "" || cidade == "" || uf == "") {
+        alert("preencha todos os campos!");
+   } else {
+        pagamento.classList.toggle("ativar");
+   }
+    
+});

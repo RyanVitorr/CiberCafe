@@ -98,6 +98,8 @@ function cancelar() {
     if (carrinho.style.display == "flex") {
         carrinho.style.display = "";
     }
+    
+    localizacao.classList.toggle("ativo");
 };
 
 // bnt comprar ------------------------------------------------------------------------
@@ -114,15 +116,18 @@ function comprar() {
     }
 }
 
-// ao clicar em continuar 
-const pagamento = document.querySelector("#pagamento");
-const continuarCompra = document.querySelector("#bntContinuarCompra");
-continuarCompra.addEventListener("click", () => {
-    pagamento.classList.toggle("ativar");
-});
-
 // clicar me pagar (cartao)
 const pagar = document.querySelector("#botao-pagar-cartao");
 pagar.addEventListener("click", () => {
-    alert("Pagamento realizado com sucesso!!!");
+    let nome = document.getElementById("nome").value;
+    let numero = document.getElementById("numero-cartao").value;
+    let validade = document.getElementById("validade").value;
+    let cvv = document.getElementById("CVV").value;   
+    
+    if (nome == "" || numero == "" || validade == "" || cvv == "") {
+        alert("Preencha todos os campos!")
+    } else {
+        alert("Pagamento realizado com sucesso!!!");
+    }
+    
 });
